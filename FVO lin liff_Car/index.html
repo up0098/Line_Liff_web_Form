@@ -156,7 +156,7 @@ input.check_me {
        </style>  
     
     <meta charset="utf-8" />
-    <title> 2025 勞動節連假 車輛登記-FVO</title>
+    <title> 2025 國慶連假 車輛登記-FVO</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- bootstrap 4.3.1 -->
@@ -456,7 +456,7 @@ input.check_me {
             }
 */
 
-/*
+
             if((redata[0].c29 == "Y")){
                 //document.getElementById("ckbx_1").checked=true;
                 document.getElementById("ckbx_6").checked = true;
@@ -471,7 +471,7 @@ input.check_me {
                 document.getElementById("slbx_7-2").value = redata[0].c34;
             }
             
-
+/*
             if((redata[0].c35 == "Y")){
                 //document.getElementById("ckbx_1").checked=true;
                 document.getElementById("ckbx_8").checked = true;
@@ -634,14 +634,14 @@ input.check_me {
                 datain_26: data_in[4][0],
                 datain_27: data_in[4][1],
                 datain_28: data_in[4][2],
-/*
+
                 datain_29: data_in[5][0],
                 datain_30: data_in[5][1],
                 datain_31: data_in[5][2],
                 datain_32: data_in[6][0],
                 datain_33: data_in[6][1],
                 datain_34: data_in[6][2],
-*/
+
 /*
                 datain_35: data_in[7][0],
                 datain_36: data_in[7][1],
@@ -711,7 +711,7 @@ input.check_me {
                         liff.sendMessages([
                             {
                                 type: 'text',
-                                text: '2025 勞動節連假 車輛登記查詢'
+                                text: '2025 國慶連假 車輛登記查詢'
                             }
                         ])
                         .then(() => {
@@ -909,7 +909,7 @@ input.check_me {
             }
 */
 
-/*
+
             ckBt =document.getElementById("ckbx_6").checked;
             if (ckBt==true){
                 data_in[5][0]="Y";
@@ -936,7 +936,7 @@ input.check_me {
                 data_in[6][1]=1;
                 data_in[6][2]=0;
             }
-*/
+
 /*
             ckBt =document.getElementById("ckbx_8").checked;
             if (ckBt==true){
@@ -1359,13 +1359,13 @@ input.check_me {
 
     <p>
         <!--<label class="check-label-title" style="border-style:ridge">2023/09/03</label>-->
-        <!--
+
         <label class="check-label-title" style="border-style:ridge" id="Date_D4_1_0"></label>
         <input type="checkbox" class="check_me" value="6" id="ckbx_6" >
         <label class="check_me_label" for="ckbx_6"></label>
- -->
+
         <!--<label class="form-check-label" for="ckbx_6" >2023/09/03(週日) 去市區</label> <br/>-->
-        <!--
+
         <label class="form-check-label" for="ckbx_6" id="Date_D4_1_w"></label> <br/>
         <label class="form-check-label" for="ckbx_6">本人含家屬共登記</label>
         <select name="select_box_1" id="slbx_6-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
@@ -1376,9 +1376,9 @@ input.check_me {
         <br/><br/>
         <input type="checkbox" class="check_me" value="7" id="ckbx_7" >
         <label class="check_me_label" for="ckbx_7"></label>
- -->
+
         <!--<label class="form-check-label" for="ckbx_7" >2023/09/03(週日) 回廠區</label> <br/>-->
-        <!--
+
         <label class="form-check-label" for="ckbx_7" id="Date_D4_3_w"></label> <br/>
         <label class="form-check-label" for="ckbx_7">本人含家屬共登記</label>
         <select name="select_box_1" id="slbx_7-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
@@ -1387,7 +1387,7 @@ input.check_me {
         <select name="select_box_1" id="slbx_7-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
         <label class="form-check-label" for="ckbx_7">件</label>
         </p><br/>
- -->
+
 
 
 <!--
@@ -1540,7 +1540,7 @@ input.check_me {
 
 <script>
     //var date = Date.now();
-    var Start_Date_Day1 = '2025/04/29'//'2023/12/30'  //'2023/08/31'
+    var Start_Date_Day1 = '2025/08/30'//'2023/12/30'  //'2023/08/31'
     var Start_Date_Day2 = new Date(Start_Date_Day1);
     var Start_Date_Day3 = new Date(Start_Date_Day1);
     var Start_Date_Day4 = new Date(Start_Date_Day1);
@@ -1583,12 +1583,12 @@ input.check_me {
     document.getElementById('Date_D3_1_0').innerHTML = Display_date_temp[0]  ;
     document.getElementById('Date_D3_1_w').innerHTML = Display_date_temp[1] + ' 去市區' ;
     document.getElementById('Date_D3_3_w').innerHTML = Display_date_temp[1] + ' 回廠區' ;
-/*
+
     Display_date_temp= Display_date(Start_Date_Day4);
     document.getElementById('Date_D4_1_0').innerHTML = Display_date_temp[0]  ;
     document.getElementById('Date_D4_1_w').innerHTML = Display_date_temp[1] + ' 去市區' ;
     document.getElementById('Date_D4_3_w').innerHTML = Display_date_temp[1] + ' 回廠區' ;
-*/
+
 
     //console.log(Display_date_temp[0]);
     //console.log(Display_date_temp[1]);
