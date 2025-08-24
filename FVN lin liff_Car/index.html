@@ -489,7 +489,7 @@ input.check_me {
             }
 */
 
-            if((redata[0].c20 == "Y1400")){
+            if((redata[0].c20 == "Y_14:00")){
                 //document.getElementById("ckbx_1").checked=true;
                 //document.getElementById("ckbx_3").checked = true;
                 document.getElementById("ckbx_3_a").checked = true;
@@ -497,7 +497,7 @@ input.check_me {
                 document.getElementById("slbx_3-2").value = redata[0].c22;
             }
 
-            if((redata[0].c20 == "Y1700")){
+            if((redata[0].c20 == "Y_17:00")){
                 //document.getElementById("ckbx_1").checked=true;
                 //document.getElementById("ckbx_3").checked = true;
                 document.getElementById("ckbx_3_b").checked = true;
@@ -506,7 +506,7 @@ input.check_me {
             }
 
 
-            if((redata[0].c20 == "Y2000")){
+            if((redata[0].c20 == "Y_20:00")){
                 //document.getElementById("ckbx_1").checked=true;
                 //document.getElementById("ckbx_3").checked = true;
                 document.getElementById("ckbx_3_c").checked = true;
@@ -521,15 +521,38 @@ input.check_me {
                 document.getElementById("slbx_4-1").value = redata[0].c24;
                 document.getElementById("slbx_4-2").value = redata[0].c25;
             }
-
+/*
             if((redata[0].c26 == "Y")){
                 //document.getElementById("ckbx_1").checked=true;
                 document.getElementById("ckbx_5").checked = true;
                 document.getElementById("slbx_5-1").value = redata[0].c27;
                 document.getElementById("slbx_5-2").value = redata[0].c28;
             }
+*/
+            if((redata[0].c26 == "Y_14:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_5_a").checked = true;
+                document.getElementById("slbx_5-1").value = redata[0].c27;
+                document.getElementById("slbx_5-2").value = redata[0].c28;
+            }
+
+            if((redata[0].c26 == "Y_17:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_5_b").checked = true;
+                document.getElementById("slbx_5-1").value = redata[0].c27;
+                document.getElementById("slbx_5-2").value = redata[0].c28;
+            }
 
 
+            if((redata[0].c26 == "Y_20:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_5_c").checked = true;
+                document.getElementById("slbx_5-1").value = redata[0].c27;
+                document.getElementById("slbx_5-2").value = redata[0].c28;
+            }
 
             if((redata[0].c29 == "Y")){
                 //document.getElementById("ckbx_1").checked=true;
@@ -537,10 +560,36 @@ input.check_me {
                 document.getElementById("slbx_6-1").value = redata[0].c30;
                 document.getElementById("slbx_6-2").value = redata[0].c31;
             }
-
+/*
             if((redata[0].c32 == "Y")){
                 //document.getElementById("ckbx_1").checked=true;
                 document.getElementById("ckbx_7").checked = true;
+                document.getElementById("slbx_7-1").value = redata[0].c33;
+                document.getElementById("slbx_7-2").value = redata[0].c34;
+            }
+*/
+
+            if((redata[0].c32 == "Y_14:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_7_a").checked = true;
+                document.getElementById("slbx_7-1").value = redata[0].c33;
+                document.getElementById("slbx_7-2").value = redata[0].c34;
+            }
+
+            if((redata[0].c32 == "Y_17:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_7_b").checked = true;
+                document.getElementById("slbx_7-1").value = redata[0].c33;
+                document.getElementById("slbx_7-2").value = redata[0].c34;
+            }
+
+
+            if((redata[0].c32 == "Y_20:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_7_c").checked = true;
                 document.getElementById("slbx_7-1").value = redata[0].c33;
                 document.getElementById("slbx_7-2").value = redata[0].c34;
             }
@@ -1359,7 +1408,7 @@ input.check_me {
     <select name="select_box_1" id="slbx_4-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
     <label class="form-check-label" for="ckbx_4">件</label>
     <br/><br/>
-    <input type="checkbox" class="check_me" value="5" id="ckbx_5" >
+    <!--<input type="checkbox" class="check_me" value="5" id="ckbx_5" >-->
     <label class="check_me_label" for="ckbx_5"></label>
     <!--<label class="form-check-label" for="ckbx_5" >2023/09/02(週六) 回廠區</label> <br/>-->
     <label class="form-check-label" for="ckbx_5" id="Date_D3_3_w"></label> <br/>
@@ -1403,7 +1452,7 @@ input.check_me {
     <select name="select_box_1" id="slbx_6-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
     <label class="form-check-label" for="ckbx_6">件</label>
     <br/><br/>
-    <input type="checkbox" class="check_me" value="7" id="ckbx_7" >
+    <!--<input type="checkbox" class="check_me" value="7" id="ckbx_7" >-->
     <label class="check_me_label" for="ckbx_7"></label>
 
     <!--<label class="form-check-label" for="ckbx_7" >2023/09/03(週日) 回廠區</label> <br/>-->
