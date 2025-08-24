@@ -491,7 +491,7 @@ input.check_me {
 
             if((redata[0].c20 == "Y1400")){
                 //document.getElementById("ckbx_1").checked=true;
-                document.getElementById("ckbx_3").checked = true;
+                //document.getElementById("ckbx_3").checked = true;
                 document.getElementById("ckbx_3_a").checked = true;
                 document.getElementById("slbx_3-1").value = redata[0].c21;
                 document.getElementById("slbx_3-2").value = redata[0].c22;
@@ -499,7 +499,7 @@ input.check_me {
 
             if((redata[0].c20 == "Y1700")){
                 //document.getElementById("ckbx_1").checked=true;
-                document.getElementById("ckbx_3").checked = true;
+                //document.getElementById("ckbx_3").checked = true;
                 document.getElementById("ckbx_3_b").checked = true;
                 document.getElementById("slbx_3-1").value = redata[0].c21;
                 document.getElementById("slbx_3-2").value = redata[0].c22;
@@ -508,7 +508,7 @@ input.check_me {
 
             if((redata[0].c20 == "Y2000")){
                 //document.getElementById("ckbx_1").checked=true;
-                document.getElementById("ckbx_3").checked = true;
+                //document.getElementById("ckbx_3").checked = true;
                 document.getElementById("ckbx_3_c").checked = true;
                 document.getElementById("slbx_3-1").value = redata[0].c21;
                 document.getElementById("slbx_3-2").value = redata[0].c22;
@@ -890,6 +890,7 @@ input.check_me {
                 data_in[1][2]=0;
             }
             
+/*            
             ckBt =document.getElementById("ckbx_3").checked;
             ckBt_a =document.getElementById("ckbx_3_a").checked;
             ckBt_b =document.getElementById("ckbx_3_b").checked;
@@ -910,6 +911,51 @@ input.check_me {
                 data_in[2][1]=1;
                 data_in[2][2]=0;
             }
+*/
+
+
+            ckBt =document.getElementById("ckbx_3_a").checked;
+            if (ckBt==true){
+                //data_in[2][0]="Y";
+                data_in[2][0]="Y1400";
+                data_in[2][1]=document.getElementById("slbx_3-1").value;
+                data_in[2][2]=document.getElementById("slbx_3-2").value;
+            }
+            else
+            {
+                data_in[2][0]="no";
+                data_in[2][1]=1;
+                data_in[2][2]=0;
+            }
+
+            ckBt =document.getElementById("ckbx_3_b").checked;
+            if (ckBt==true){
+                //data_in[2][0]="Y";
+                data_in[2][0]="Y1700";
+                data_in[2][1]=document.getElementById("slbx_3-1").value;
+                data_in[2][2]=document.getElementById("slbx_3-2").value;
+            }
+            else
+            {
+                data_in[2][0]="no";
+                data_in[2][1]=1;
+                data_in[2][2]=0;
+            }
+
+            ckBt =document.getElementById("ckbx_3_c").checked;
+            if (ckBt==true){
+                //data_in[2][0]="Y";
+                data_in[2][0]="Y2000";
+                data_in[2][1]=document.getElementById("slbx_3-1").value;
+                data_in[2][2]=document.getElementById("slbx_3-2").value;
+            }
+            else
+            {
+                data_in[2][0]="no";
+                data_in[2][1]=1;
+                data_in[2][2]=0;
+            }
+
 
             ckBt =document.getElementById("ckbx_4").checked;
             if (ckBt==true){
@@ -1269,16 +1315,16 @@ input.check_me {
     <select name="select_box_1" id="slbx_2-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
     <label class="form-check-label" for="ckbx_2">件</label>
     <br/><br/>
-    <input type="checkbox" class="check_me" value="3" id="ckbx_3" >
+    <!--<input type="checkbox" class="check_me" value="3" id="ckbx_3" >-->
     <!--<label class="form-check-label" for="ckbx_3" > 2023/09/01(週五) 回廠區</label> <br/>    --> <!--2023/01/01(週日) 回廠區-->
     <label class="form-check-label" for="ckbx_3"  id="Date_D2_3_w" ></label> <br/>    <!--2023/09/01(週五) 回廠區-->
 
-    <input type="checkbox" class="check_me" value="3" id="ckbx_3_a" >   <label class="form-check-label" for="ckbx_3_a" > 14:00</label> 
-
-    <input type="checkbox" class="check_me" value="3" id="ckbx_3_b" >   <label class="form-check-label" for="ckbx_3_b" > 17:00</label>
-
-    <input type="checkbox" class="check_me" value="3" id="ckbx_3_c" >   <label class="form-check-label" for="ckbx_3_c" > 20:00</label> 
-
+    <input type="checkbox" name="ckbx_3" class="check_me" value="3" id="ckbx_3_a" >   <label class="form-check-label" for="ckbx_3_a" > 14:00</label> 
+    <br/>
+    <input type="checkbox" name="ckbx_3" class="check_me" value="3" id="ckbx_3_b" >   <label class="form-check-label" for="ckbx_3_b" > 17:00</label>
+    <br/>
+    <input type="checkbox" name="ckbx_3" class="check_me" value="3" id="ckbx_3_c" >   <label class="form-check-label" for="ckbx_3_c" > 20:00</label> 
+    <br/>
 
 
     <label class="form-check-label" for="ckbx_3">本人含家屬共登記</label>
