@@ -912,74 +912,26 @@ input.check_me {
                 data_in[2][2]=0;
             }
 */
-/*
-            ckBt =document.getElementsByName("radio_3");
-            //ckBt =document.getElementById("ckbx_3_a").checked;
-            if (ckBt[0].length > 2){
-                data_in[2][0]=ckBt[0].value;
-                data_in[2][1]=document.getElementById("slbx_3-1").value;
-                data_in[2][2]=document.getElementById("slbx_3-2").value;
-            }
-            else
+
+
+            //回程三個時段的判斷與填資料，第一天
+                ratings = document.getElementsByName('radio_3');
+            for (const rating of ratings) 
             {
-                //data_in[2][0]=ckBt[0].value;
-                data_in[2][0]=ckBt[0].length;
-                //data_in[2][0]="no";
-                data_in[2][1]=1;
-                data_in[2][2]=0;
-
-            }
-*/
-let ratings = document.getElementsByName('radio_3');
-
-for (const rating of ratings) {
- if (rating.checked) {
-  data_in[2][0]=`${rating.value}`;
-data_in[2][1]=document.getElementById("slbx_3-1").value;
-data_in[2][2]=document.getElementById("slbx_3-2").value;
-break;
- }
-            else
-            {
-                //data_in[2][0]=ckBt[0].value;
-                //data_in[2][0]=ckBt[0].length;
-                data_in[2][0]="no";
-                data_in[2][1]=1;
-                data_in[2][2]=0;
-
-            }
-}
-
-
-/*
-            ckBt =document.getElementById("ckbx_3_b").checked;
-            if (ckBt==true){
-                //data_in[2][0]="Y";
-                data_in[2][0]="Y1700";
-                data_in[2][1]=document.getElementById("slbx_3-1").value;
-                data_in[2][2]=document.getElementById("slbx_3-2").value;
-            }
-            else
-            {
-                data_in[2][0]="no";
-                data_in[2][1]=1;
-                data_in[2][2]=0;
+                if (rating.checked) {
+                    data_in[2][0]=`${rating.value}`;
+                    data_in[2][1]=document.getElementById("slbx_3-1").value;
+                    data_in[2][2]=document.getElementById("slbx_3-2").value;
+                    break;//跳出迴圈，否則得到的結果會被後面蓋掉
+                }
+                else
+                {
+                    data_in[2][0]="no";
+                    data_in[2][1]=1;
+                    data_in[2][2]=0;
+                }
             }
 
-            ckBt =document.getElementById("ckbx_3_c").checked;
-            if (ckBt==true){
-                //data_in[2][0]="Y";
-                data_in[2][0]="Y2000";
-                data_in[2][1]=document.getElementById("slbx_3-1").value;
-                data_in[2][2]=document.getElementById("slbx_3-2").value;
-            }
-            else
-            {
-                data_in[2][0]="no";
-                data_in[2][1]=1;
-                data_in[2][2]=0;
-            }
-*/
 
             ckBt =document.getElementById("ckbx_4").checked;
             if (ckBt==true){
@@ -994,16 +946,10 @@ break;
                 data_in[3][2]=0;
             }
 
+/*
             ckBt =document.getElementById("ckbx_5").checked;
-            ckBt_a =document.getElementById("ckbx_5_a").checked;
-            ckBt_b =document.getElementById("ckbx_5_b").checked;
-            ckBt_C =document.getElementById("ckbx_5_c").checked;
             if (ckBt==true){
-                if(ckBt_a==true){data_in[4][0]="Y1400";}
-                if(ckBt_b==true){data_in[4][0]="Y1700";}
-                if(ckBt_c==true){data_in[4][0]="Y2000";}
-
-                //data_in[4][0]="Y";
+                data_in[4][0]="Y";
                 data_in[4][1]=document.getElementById("slbx_5-1").value;
                 data_in[4][2]=document.getElementById("slbx_5-2").value;
             }
@@ -1013,7 +959,25 @@ break;
                 data_in[4][1]=1;
                 data_in[4][2]=0;
             }
+*/
 
+            //回程三個時段的判斷與填資料，第二天
+                ratings = document.getElementsByName('radio_5');
+            for (const rating of ratings) 
+            {
+                if (rating.checked) {
+                    data_in[4][0]=`${rating.value}`;
+                    data_in[4][1]=document.getElementById("slbx_5-1").value;
+                    data_in[4][2]=document.getElementById("slbx_5-2").value;
+                    break;//跳出迴圈，否則得到的結果會被後面蓋掉
+                }
+                else
+                {
+                    data_in[4][0]="no";
+                    data_in[4][1]=1;
+                    data_in[4][2]=0;
+                }
+            }
 
             ckBt =document.getElementById("ckbx_6").checked;
             if (ckBt==true){
@@ -1028,17 +992,10 @@ break;
                 data_in[5][2]=0;
             }
             
-            
+/*
             ckBt =document.getElementById("ckbx_7").checked;
-            ckBt_a =document.getElementById("ckbx_7_a").checked;
-            ckBt_b =document.getElementById("ckbx_7_b").checked;
-            ckBt_C =document.getElementById("ckbx_7_c").checked;
             if (ckBt==true){
-                if(ckBt_a==true){data_in[6][0]="Y1400";}
-                if(ckBt_b==true){data_in[6][0]="Y1700";}
-                if(ckBt_c==true){data_in[6][0]="Y2000";}
-
-                //data_in[6][0]="Y";
+                data_in[6][0]="Y";
                 data_in[6][1]=document.getElementById("slbx_7-1").value;
                 data_in[6][2]=document.getElementById("slbx_7-2").value;
             }
@@ -1048,6 +1005,26 @@ break;
                 data_in[6][1]=1;
                 data_in[6][2]=0;
             }
+*/
+
+            //回程三個時段的判斷與填資料，第二天
+                ratings = document.getElementsByName('radio_7');
+            for (const rating of ratings) 
+            {
+                if (rating.checked) {
+                    data_in[6][0]=`${rating.value}`;
+                    data_in[6][1]=document.getElementById("slbx_7-1").value;
+                    data_in[6][2]=document.getElementById("slbx_7-2").value;
+                    break;//跳出迴圈，否則得到的結果會被後面蓋掉
+                }
+                else
+                {
+                    data_in[6][0]="no";
+                    data_in[6][1]=1;
+                    data_in[6][2]=0;
+                }
+            }
+
 
 /*
             ckBt =document.getElementById("ckbx_8").checked;
@@ -1387,9 +1364,12 @@ break;
     <!--<label class="form-check-label" for="ckbx_5" >2023/09/02(週六) 回廠區</label> <br/>-->
     <label class="form-check-label" for="ckbx_5" id="Date_D3_3_w"></label> <br/>
 
-    <input type="checkbox" class="check_me" value="5" id="ckbx_5_a" >   <label class="form-check-label" for="ckbx_5_a" > 14:00</label> 
-    <input type="checkbox" class="check_me" value="5" id="ckbx_5_b" >   <label class="form-check-label" for="ckbx_5_b" > 17:00</label>
-    <input type="checkbox" class="check_me" value="5" id="ckbx_5_c" >   <label class="form-check-label" for="ckbx_5_c" > 20:00</label>
+    <div><input type="radio" name="radio_5" class="check_me" value="Y_14:00" id="ckbx_5_a" >   <label class="form-check-label" for="ckbx_5_a" > 14:00</label></div> 
+    <br/>
+    <div><input type="radio" name="radio_5" class="check_me" value="Y_17:00" id="ckbx_5_b" >   <label class="form-check-label" for="ckbx_5_b" > 17:00</label></div>
+    <br/>
+    <div><input type="radio" name="radio_5" class="check_me" value="Y_20:00" id="ckbx_5_c" >   <label class="form-check-label" for="ckbx_5_c" > 20:00</label></div>
+    <br/>
 
 
     <label class="form-check-label" for="ckbx_5">本人含家屬共登記</label>
@@ -1430,9 +1410,12 @@ break;
 
     <label class="form-check-label" for="ckbx_7" id="Date_D4_3_w"></label> <br/>
 
-    <input type="checkbox" class="check_me" value="7" id="ckbx_7_a" >   <label class="form-check-label" for="ckbx_7_a" > 14:00</label>
-    <input type="checkbox" class="check_me" value="7" id="ckbx_7_b" >   <label class="form-check-label" for="ckbx_7_b" > 17:00</label>
-    <input type="checkbox" class="check_me" value="7" id="ckbx_7_c" >   <label class="form-check-label" for="ckbx_7_c" > 20:00</label>
+    <div><input type="radio" name="radio_7" class="check_me" value="Y_14:00" id="ckbx_7_a" >   <label class="form-check-label" for="ckbx_7_a" > 14:00</label></div> 
+    <br/>
+    <div><input type="radio" name="radio_7" class="check_me" value="Y_17:00" id="ckbx_7_b" >   <label class="form-check-label" for="ckbx_7_b" > 17:00</label></div>
+    <br/>
+    <div><input type="radio" name="radio_7" class="check_me" value="Y_20:00" id="ckbx_7_c" >   <label class="form-check-label" for="ckbx_7_c" > 20:00</label></div>
+    <br/>
 
     <label class="form-check-label" for="ckbx_7">本人含家屬共登記</label>
     <select name="select_box_1" id="slbx_7-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
