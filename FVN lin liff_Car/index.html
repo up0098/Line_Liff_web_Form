@@ -913,21 +913,21 @@ input.check_me {
             }
 */
 
-
-            ckBt =document.getElementById("ckbx_3_a").checked;
-            if (ckBt==true){
-                //data_in[2][0]="Y";
-                data_in[2][0]="Y1400";
-                data_in[2][1]=document.getElementById("slbx_3-1").value;
-                data_in[2][2]=document.getElementById("slbx_3-2").value;
-            }
-            else
-            {
+            ckBt =document.getElementsByName("radio_3").value;
+            //ckBt =document.getElementById("ckbx_3_a").checked;
+            if (ckBt==""){
                 data_in[2][0]="no";
                 data_in[2][1]=1;
                 data_in[2][2]=0;
             }
+            else
+            {
+                data_in[2][0]=ckBt;
+                data_in[2][1]=document.getElementById("slbx_3-1").value;
+                data_in[2][2]=document.getElementById("slbx_3-2").value;
 
+            }
+/*
             ckBt =document.getElementById("ckbx_3_b").checked;
             if (ckBt==true){
                 //data_in[2][0]="Y";
@@ -955,7 +955,7 @@ input.check_me {
                 data_in[2][1]=1;
                 data_in[2][2]=0;
             }
-
+*/
 
             ckBt =document.getElementById("ckbx_4").checked;
             if (ckBt==true){
@@ -1321,11 +1321,11 @@ input.check_me {
 <fieldset>
     <legend><label class="form-check-label" for="ckbx_3"  id="Date_D2_3_w" ></label></legend>
 
-    <div><input type="radio" name="radio_3" class="check_me" value="3" id="ckbx_3_a" >   <label class="form-check-label" for="ckbx_3_a" > 14:00</label></div> 
+    <div><input type="radio" name="radio_3" class="check_me" value="Y1400" id="ckbx_3_a" >   <label class="form-check-label" for="ckbx_3_a" > 14:00</label></div> 
     <br/>
-    <div><input type="radio" name="radio_3" class="check_me" value="3" id="ckbx_3_b" >   <label class="form-check-label" for="ckbx_3_b" > 17:00</label></div>
+    <div><input type="radio" name="radio_3" class="check_me" value="Y1700" id="ckbx_3_b" >   <label class="form-check-label" for="ckbx_3_b" > 17:00</label></div>
     <br/>
-    <div><input type="radio" name="radio_3" class="check_me" value="3" id="ckbx_3_c" >   <label class="form-check-label" for="ckbx_3_c" > 20:00</label></div>
+    <div><input type="radio" name="radio_3" class="check_me" value="Y2000" id="ckbx_3_c" >   <label class="form-check-label" for="ckbx_3_c" > 20:00</label></div>
     <br/>
 
     <label class="form-check-label" for="ckbx_3">本人含家屬共登記</label>
