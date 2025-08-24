@@ -915,16 +915,16 @@ input.check_me {
 
             ckBt =document.getElementsByName("radio_3");
             //ckBt =document.getElementById("ckbx_3_a").checked;
-            if (ckBt[0].value==null){
-                data_in[2][0]="no";
-                data_in[2][1]=1;
-                data_in[2][2]=0;
-            }
-            else
-            {
+            if (ckBt[0].length > 2){
                 data_in[2][0]=ckBt[0].value;
                 data_in[2][1]=document.getElementById("slbx_3-1").value;
                 data_in[2][2]=document.getElementById("slbx_3-2").value;
+            }
+            else
+            {
+                data_in[2][0]="no";
+                data_in[2][1]=1;
+                data_in[2][2]=0;
 
             }
 /*
