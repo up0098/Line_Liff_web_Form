@@ -167,7 +167,7 @@ input.check_me {
        </style>  
     
     <meta charset="utf-8" />
-    <title> 2025 勞動節連假 用餐登記</title>
+    <title> 2025 國慶連假 用餐登記</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- bootstrap 4.3.1 -->
@@ -424,7 +424,9 @@ input.check_me {
                 document.getElementById("ckbx_7").checked = true;
                 document.getElementById("slbx_7-1").value = redata[0].c27;
             }
-/*
+
+
+
             if((redata[0].c28 == "Y")){
                 //document.getElementById("ckbx_1").checked=true;
                 document.getElementById("ckbx_8").checked = true;
@@ -442,7 +444,9 @@ input.check_me {
                 document.getElementById("ckbx_10").checked = true;
                 document.getElementById("slbx_10-1").value = redata[0].c33;
             }
-*/
+
+
+
 /* 
             if((redata[0].c34 == "Y")){
                 //document.getElementById("ckbx_1").checked=true;
@@ -631,7 +635,7 @@ input.check_me {
                 datain_26: data_in[6][0],
                 datain_27: data_in[6][1],
 
-                /*
+
                 datain_28: data_in[7][0],
                 datain_29: data_in[7][1],
 
@@ -640,7 +644,7 @@ input.check_me {
 
                 datain_32: data_in[9][0],
                 datain_33: data_in[9][1],
-                */
+
 
 /* 
                 datain_34: data_in[10][0],
@@ -733,7 +737,7 @@ input.check_me {
                         liff.sendMessages([
                             {
                                 type: 'text',
-                                text: '2025 勞動節連假 用餐登記查詢'
+                                text: '2025 國慶連假 用餐登記查詢'
                             }
                         ])
 
@@ -778,7 +782,7 @@ input.check_me {
             
                 //建立2維陣列，[][]方式無效，要用迴圈跑
                 var data_in = [];
-                for (i = 0 ; i < 15 ; i++) {
+                for (i = 0 ; i < 15 +3; i++) {
                     data_in[i] = [];
                     }
 
@@ -786,7 +790,7 @@ input.check_me {
                 var ckbx_no;
                 ckbx_no=1;
 
-                for (i=0 ; i<=13-1-3-3;i++){
+                for (i=0 ; i<=13-1-3-3+3;i++){
 
                     ckBt =document.getElementById("ckbx_" + ckbx_no).checked;
                 if (ckBt==true){
@@ -1273,13 +1277,13 @@ input.check_me {
 
     <p>
     <!-- <label class="check-label-title" style="border-style:ridge">2023/05/01</label> -->
-    <!--
+
     <label class="check-label-title" style="border-style:ridge" id="Date_D4_1_0"></label>
     <input type="checkbox" class="check_me" value="8" id="ckbx_8" >
     <label class="check_me_label" for="ckbx_8"></label>
-    -->
+
     <!-- <label class="form-check-label" for="ckbx_8" >2023/05/01(週一) 早上用餐登記</label> <br/> -->
-    <!--
+
     <label class="form-check-label" for="ckbx_8" id="Date_D4_1_w"></label> <br/>
     <label class="form-check-label" for="ckbx_8">本人含家屬共登記</label>
     <select name="select_box_1" id="slbx_8-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
@@ -1287,9 +1291,9 @@ input.check_me {
     <br/><br/>
     <input type="checkbox" class="check_me" value="9" id="ckbx_9" >
     <label class="check_me_label" for="ckbx_9"></label>
-    -->
+
     <!-- <label class="form-check-label" for="ckbx_9" >2023/05/01(週一) 中午用餐登記</label> <br/> -->
-    <!--
+
     <label class="form-check-label" for="ckbx_9" id="Date_D4_2_w"></label> <br/>
     <label class="form-check-label" for="ckbx_9">本人含家屬共登記</label>
     <select name="select_box_1" id="slbx_9-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
@@ -1297,15 +1301,15 @@ input.check_me {
     <br/><br/>
     <input type="checkbox" class="check_me" value="10" id="ckbx_10" >
     <label class="check_me_label" for="ckbx_10"></label>
-    -->
+
     <!-- <label class="form-check-label" for="ckbx_10" >2023/05/01(週一) 晚上用餐登記</label> <br/> -->
-    <!--
+
     <label class="form-check-label" for="ckbx_10" id="Date_D4_3_w"></label> <br/>
     <label class="form-check-label" for="ckbx_10">本人含家屬共登記</label>
     <select name="select_box_1" id="slbx_10-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
     <label class="form-check-label" for="ckbx_10">位；</label>
     </p><br/>
-    -->
+
 
 
 <!-- 
@@ -1468,7 +1472,7 @@ input.check_me {
 
 <script>
     //var date = Date.now();
-    var Start_Date_Day1 = '2025/04/29'  //'2023/08/31'
+    var Start_Date_Day1 = '2025/08/30'  //'2023/08/31'
     var Start_Date_Day2 = new Date(Start_Date_Day1);
     var Start_Date_Day3 = new Date(Start_Date_Day1);
     var Start_Date_Day4 = new Date(Start_Date_Day1);
@@ -1514,13 +1518,13 @@ input.check_me {
     document.getElementById('Date_D3_2_w').innerHTML = Display_date_temp[1] + ' 中午用餐登記' ;
     document.getElementById('Date_D3_3_w').innerHTML = Display_date_temp[1] + ' 晚上用餐登記' ;
 
-    /*
+
     Display_date_temp= Display_date(Start_Date_Day4);
     document.getElementById('Date_D4_1_0').innerHTML = Display_date_temp[0]  ;
     document.getElementById('Date_D4_1_w').innerHTML = Display_date_temp[1] + ' 早上用餐登記' ;
     document.getElementById('Date_D4_2_w').innerHTML = Display_date_temp[1] + ' 中午用餐登記' ;
     document.getElementById('Date_D4_3_w').innerHTML = Display_date_temp[1] + ' 晚上用餐登記' ;
-*/
+
 
     //console.log(Display_date_temp[0]);
     //console.log(Display_date_temp[1]);
