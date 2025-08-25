@@ -1,0 +1,1702 @@
+ 
+﻿<!DOCTYPE html>
+<html>
+<head>
+    
+    <!--
+    <title> 
+        Set checkbox size 
+    </title> 
+      -->
+      
+    <!-- Style to set the size of checkbox -->
+    <style> 
+
+        input.check_me { 
+            width: 25px; 
+            height: 25px; 
+        } 
+
+         label {
+          font-family: "Trebuchet MS", Verdana, Halvetica, Arial;
+          font-size: 18px;
+          color: #040507;
+          display: block;
+
+        }
+        
+
+        label.form-check-label {
+
+          font-size: 16px;
+          color: #040507;
+
+
+        }
+
+         label.check-label-title {
+          font-family: "Trebuchet MS", Verdana, Halvetica, Arial;
+          font-size: 25px;
+          color: #040507;
+          display: block;
+          text-align:center; padding:0px;width:200px;
+
+
+        }
+
+
+
+        #text_list {
+
+        background:#ffffffb4;
+
+        }
+
+/*
+        #list_1 {
+
+            background:#ffffffc6;
+
+        }
+        #list_2 {
+
+            background:#ffffffc6;
+
+        }
+*/
+            body{
+                    /*
+                margin:0px;
+                padding:0px;
+                background:#fff url("59569394-1.jpg")  fixed no-repeat;
+                background-size: contain ;
+                */
+                position: relative;
+            }        
+
+            body::before {
+                content: "";
+                display: block;
+                background:#fff url("images_8.jpg")  fixed no-repeat;
+                background-size: contain ;
+                /*height: 300px;
+                width: 100%;*/
+                opacity: 0.5;
+                position: absolute;
+                /* 偏移值皆設為 0，讓僞元素跟父元素一樣大小 */
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+}
+
+            body  .content {
+            position: relative;
+            }
+
+
+
+
+
+/*測試*/
+/*
+label.check_me_label {
+  display: inline-block;
+  -webkit-user-select: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #808080;
+  border-radius: 5px;
+  transition: .25s;
+  cursor: pointer;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.1);
+  font: normal 20px/18px "icon";
+  text-align: center;
+  margin: 10px 1 auto;
+}
+
+label.check_me_label:after {
+  content: "✓";
+}
+
+label.check_me_label:hover {
+  border-color: black;
+  color: rgba(0, 0, 0, 0);
+}
+
+label.check_me_label:active {
+  transition: 0;
+  -webkit-filter: brightness(.8);
+}
+
+input.check_me:checked + label.check_me_label {
+  color: limegreen;
+}
+
+input.check_me:checked + label.check_me_label {
+  border-color: black;
+  background: white;
+  box-shadow: 0 0 0 .25rem black;
+}
+
+input.check_me:checked + label.check_me_label {
+  border-color: limegreen;
+  background: white;
+  box-shadow: 0 0 0 .25rem limegreen;
+}
+
+input.check_me:checked + .check_me_label {
+  border-color: limegreen;
+  background: limegreen;
+  box-shadow: 0 0 0 .25rem limegreen;
+  color: white;
+}
+
+input.check_me:checked + label.check_me_label {
+  -webkit-animation: boom .5s;
+}
+
+@-webkit-keyframes boom {
+  
+  25% {
+    -webkit-transform: scale(1.25);
+  }
+}
+
+input.check_me {
+  display: none;
+}
+*/
+/*測試*/
+
+
+       </style>  
+    
+    <meta charset="utf-8" />
+    <title> 2025 國慶連假 車輛登記</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- bootstrap 4.3.1 -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://www.html-code-generator.com/style/hcg/style-4.css?119">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!--<script src="js/main.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.8.16/dayjs.min.js" crossorigin="anonymous"></script>
+
+   <style>
+       #MainDiv button {
+           margin:3px;
+       }
+   </style>
+    <script>
+
+        //你的liff app ID, 例如 --> 0000000000-spPeRmAn
+        var YourLiffAppId = '1655609516-LvGJ7lxY';
+        var  yourUserID ;
+        function initializeLiff(myLiffId) {
+            liff
+                .init({
+                    liffId: myLiffId
+                })
+                .then(() => {
+                    //取得QueryString
+                    let urlParams = new URLSearchParams(window.location.search);
+                    //顯示QueryString
+                    $('#QueryString').val(urlParams.toString());
+                    //顯示UserId
+                    liff.getProfile().then(function (e) {
+                        $('#field_info').val(e.userId);
+                        yourUserID = e.userId.toString();
+                         $('#QueryString').val(yourUserID +"_1");
+                        
+                });
+            })
+            .catch((err) => {
+                alert(JSON.stringify(err));
+            });
+        }
+/*
+        //var date = Date.now();
+        var Start_Date = '2023/08/31'
+        var Start_Date_Day2 = new Date(Start_Date);
+        var Start_Date_Day3 = new Date(Start_Date);
+        var Start_Date_Day4 = new Date(Start_Date);
+
+        Start_Date_Day2.setDate(Start_Date_Day2.getDate() + 2-1); 
+        Start_Date_Day3.setDate(Start_Date_Day3.getDate() + 3-1); 
+        Start_Date_Day4.setDate(Start_Date_Day4.getDate() + 4-1); 
+
+        var Date_Temp = new Date(Start_Date);
+        const Date_Temp_format = dayjs(Date_Temp).format("YYYY/MM/DD");
+        console.log(Date_Temp);
+        console.log(Date_Temp.getDay());
+    var days_abbr = ['(週日)','(週一)','(週二)','(週三)','(週四)','(週五)','(週六)'];
+
+    //console.log(days_abbr[Date_Temp.getDay()]);
+        var Date_Temp_GetDay=days_abbr[Date_Temp.getDay()];
+        console.log(Date_Temp_GetDay);
+        Date_D1_3_0 =Date_Temp_format;
+        Date_D1_3_0_W=Date_Temp_format +" "+ Date_Temp_GetDay;
+        console.log(Date_D1_3_0);
+        console.log(Date_D1_3_0_W);
+
+
+        function Display_date(Start_Date){
+            var return_Date=[];
+            var Date_Temp = new Date(Start_Date);
+            const Date_Temp_format = dayjs(Date_Temp).format("YYYY/MM/DD");
+            //console.log(Date_Temp);
+            //console.log(Date_Temp.getDay());
+            var days_abbr = ['(週日)','(週一)','(週二)','(週三)','(週四)','(週五)','(週六)'];
+
+            //console.log(days_abbr[Date_Temp.getDay()]);
+            var Date_Temp_GetDay=days_abbr[Date_Temp.getDay()];
+            //console.log(Date_Temp_GetDay);
+
+            return_Date[0] = Date_Temp_format;
+            return_Date[1] = Date_Temp_format +" "+ Date_Temp_GetDay;
+            return return_Date;
+        }
+        var Display_date_temp =[];
+        Display_date_temp= Display_date(Start_Date);
+        console.log(Display_date_temp[0]);
+        console.log(Display_date_temp[1]);
+        //Date_D1_3_0 =Display_date_temp[0];
+        //Date_D1_3_0_W=Display_date_temp[1];
+
+        alert(  Display_date_temp[1]);
+
+        //document.getElementById('Date_D1_3_0').textContent = "11";
+
+        //document.getElementById('Date_D1_3_0_W').textContent = Display_date_temp[1];
+        //$('#Date_D1_3_0').text(Display_date_temp[0]);
+        //$('#Date_D1_3_0_W').text(Display_date_temp[1]);
+        document.getElementById('Date_D1_3_0').innerHTML = Display_date(Start_Date);
+        //document.getElementById("Date_D1_3_0").value = Display_date_temp[1];
+        //$('#Date_D1_3_0').text('無資料');
+
+
+        Display_date_temp= Display_date(Start_Date_Day2);
+        //console.log(Display_date_temp[0]);
+        //console.log(Display_date_temp[1]);
+        //Date_D2_1_0 =Display_date_temp[0];
+        //Date_D2_1_0_W=Display_date_temp[1];
+
+        alert(Display_date_temp[0]);
+
+        //document.getElementById('Date_D2_1_0').textContent = Display_date_temp[0];
+        //document.getElementById('Date_D2_1_0_W').textContent = Display_date_temp[1];
+        $('#Date_D2_1_0').text(Display_date_temp[0]);
+        $('#Date_D2_1_0_W').text(Display_date_temp[1]);
+*/
+
+
+        function read_ss_value(userid){
+        var 
+            appUrl = 'https://script.google.com/macros/s/AKfycbyYCi6hmEjLzrqtFMZSADQCAfVJ_2qSxTVzTRDXRaiBKBb6SWI/exec',
+            sheetsUrl = 'https://docs.google.com/spreadsheets/d/1pZpwgUFCU8GAIUMitueoPtcbnv2Gz7sUS5a2-PypcpY/edit#gid=0',
+                sheetName = '搭車總表',
+                startRow = 1,
+                startColumn = 3,
+                show = $('#show');
+
+                var parameter = {};
+            
+                //---------------------------------------------------
+                         $('#QueryString').val(userid +"_2");
+                //----------------------------------------------------
+
+                //sendBtn.on('click',function() {
+                
+                parameter = {
+                //url: sheetsUrl.val(),
+                //name: sheetName.val(),
+                //UserID_temp: ": field_info.val(),
+                UserID_temp:  userid,
+                type: "Select",
+                startRow: 1,
+                startColumn: 1
+                };
+                $.get(appUrl,parameter, function(data) {
+                  if(!data){
+                    show.text('無資料');
+                    //QueryString.text('無資料');
+                  }else{
+                    show.text(data);
+                    $('#QueryString').val(userid +"_3");
+                    
+                    //QueryString.text(yourUserID+"----"+data.toString());
+                  }
+            });
+        }
+
+        function get_ss_value(userid){
+        var 
+            appUrl = 'https://script.google.com/macros/s/AKfycbyYCi6hmEjLzrqtFMZSADQCAfVJ_2qSxTVzTRDXRaiBKBb6SWI/exec',
+            sheetsUrl = 'https://docs.google.com/spreadsheets/d/1pZpwgUFCU8GAIUMitueoPtcbnv2Gz7sUS5a2-PypcpY/edit#gid=0',
+                sheetName = '搭車總表',
+                startRow = 1,
+                startColumn = 3,
+                rpValue = $('#rpValue');
+                show = $('#show');
+
+                var parameter = {};
+            
+                //---------------------------------------------------
+                         $('#QueryString').val(userid +"_2");
+                //----------------------------------------------------
+
+                //sendBtn.on('click',function() {
+                
+                parameter = {
+                //url: sheetsUrl.val(),
+                //name: sheetName.val(),
+                //UserID_temp: ": field_info.val(),
+                UserID_temp:  userid,
+                type: "ReadValue",
+                startRow: 1,
+                startColumn: 1
+                };
+                /*
+                $.get(appUrl,parameter, function(data) {
+                  if(!data){
+                    show.text('無資料');
+                    //QueryString.text('無資料');
+                  }else{
+                    show.text(data);
+                    $('#QueryString').val(userid +"_SS");
+                    
+                    //QueryString.text(yourUserID+"----"+data.toString());
+                  }
+            });
+            */
+
+            $.ajax({
+                    type: 'get',
+                    url: appUrl,
+                    dataType:"json",
+                    error:function(xhr){
+                        //alert('error')
+                    },
+                    data:parameter,
+                      success: function(redata) {
+
+                        //var [c1, c2, c3, c4, c5] = redata.data;
+                        rpValue.text(redata[0].c1);
+
+                        //if((redata[0].c1 == "true")){
+                            //Write_ckbox_value(redata);
+                        //}
+
+
+                        if((redata[0].c1 == true)){
+                            Write_ckbox_value(redata);
+                        }
+                        else
+                        {
+                            //alert('未有登記資料，請進行登記');
+                        }
+                        document.getElementById("checkbox_list").style.display="inline";
+                        //alert('回傳');
+                            //alert('回傳'+ redata[0].c5);
+                        //alert('送出-get_ss_value');
+                        /*
+                        if(!redata){
+                            rpValue.text('無資料');
+                        //QueryString.text('無資料');
+                         }else{
+
+                            rpValue.text(redata[0].c5);
+
+                            Write_ckbox_value(redata);
+
+                            alert('回傳');
+                            //show.text(data);
+                    //$('#QueryString').val(userid +"_SS");
+                        //$('#QueryString').val(userid +"_4");
+                    
+                       //QueryString.text(yourUserID+"----"+data.toString());
+                         }
+                         */
+                    }
+            });
+
+        }
+        function Write_ckbox_value(redata){
+            /*
+            document.getElementById("ckbx_1").checked = false;
+            document.getElementById("ckbx_2").checked = false;
+            document.getElementById("ckbx_3").checked = false;
+            document.getElementById("ckbx_4").checked = false;
+            document.getElementById("ckbx_5").checked = false;
+
+            document.getElementById("slbx_1-1").selectedIndex = 0;
+            document.getElementById("slbx_2-1").selectedIndex = 0;
+            document.getElementById("slbx_3-1").selectedIndex = 0;
+            document.getElementById("slbx_4-1").selectedIndex = 0;
+            document.getElementById("slbx_5-1").selectedIndex = 0;
+*/
+            //document.getElementById("slbx_1-2").selectedIndex = 0;
+            //document.getElementById("slbx_2-2").selectedIndex = 0;
+            //document.getElementById("slbx_3-2").selectedIndex = 1;
+            //document.getElementById("slbx_4-2").selectedIndex = 1;
+            //document.getElementById("slbx_5-2").selectedIndex = 2;
+
+
+/*
+            if((redata[0].c14 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_1").checked = true;
+                document.getElementById("slbx_1-1").value = redata[0].c15;
+                document.getElementById("slbx_1-2").value = redata[0].c16;
+            }
+            else{
+                document.getElementById("ckbx_1").checked = false;
+                document.getElementById("slbx_1-1").value = 1;
+                document.getElementById("slbx_1-2").value = 0;
+            }
+*/
+
+            if((redata[0].c14 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_1").checked = true;
+                document.getElementById("slbx_1-1").value = redata[0].c15;
+                document.getElementById("slbx_1-2").value = redata[0].c16;
+            }
+
+            if((redata[0].c17 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_2").checked = true;
+                document.getElementById("slbx_2-1").value = redata[0].c18;
+                document.getElementById("slbx_2-2").value = redata[0].c19;
+            }
+/*
+            if((redata[0].c20 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_3").checked = true;
+                document.getElementById("slbx_3-1").value = redata[0].c21;
+                document.getElementById("slbx_3-2").value = redata[0].c22;
+            }
+*/
+
+            if((redata[0].c20 == "Y_15:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_3_a").checked = true;
+                document.getElementById("slbx_3-1").value = redata[0].c21;
+                document.getElementById("slbx_3-2").value = redata[0].c22;
+            }
+
+            if((redata[0].c20 == "Y_17:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_3_b").checked = true;
+                document.getElementById("slbx_3-1").value = redata[0].c21;
+                document.getElementById("slbx_3-2").value = redata[0].c22;
+            }
+
+
+            if((redata[0].c20 == "Y_20:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_3_c").checked = true;
+                document.getElementById("slbx_3-1").value = redata[0].c21;
+                document.getElementById("slbx_3-2").value = redata[0].c22;
+            }
+
+
+            if((redata[0].c23 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_4").checked = true;
+                document.getElementById("slbx_4-1").value = redata[0].c24;
+                document.getElementById("slbx_4-2").value = redata[0].c25;
+            }
+/*
+            if((redata[0].c26 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_5").checked = true;
+                document.getElementById("slbx_5-1").value = redata[0].c27;
+                document.getElementById("slbx_5-2").value = redata[0].c28;
+            }
+*/
+            if((redata[0].c26 == "Y_15:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_5_a").checked = true;
+                document.getElementById("slbx_5-1").value = redata[0].c27;
+                document.getElementById("slbx_5-2").value = redata[0].c28;
+            }
+
+            if((redata[0].c26 == "Y_17:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_5_b").checked = true;
+                document.getElementById("slbx_5-1").value = redata[0].c27;
+                document.getElementById("slbx_5-2").value = redata[0].c28;
+            }
+
+
+            if((redata[0].c26 == "Y_20:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_5_c").checked = true;
+                document.getElementById("slbx_5-1").value = redata[0].c27;
+                document.getElementById("slbx_5-2").value = redata[0].c28;
+            }
+
+            if((redata[0].c29 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_6").checked = true;
+                document.getElementById("slbx_6-1").value = redata[0].c30;
+                document.getElementById("slbx_6-2").value = redata[0].c31;
+            }
+/*
+            if((redata[0].c32 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_7").checked = true;
+                document.getElementById("slbx_7-1").value = redata[0].c33;
+                document.getElementById("slbx_7-2").value = redata[0].c34;
+            }
+*/
+
+            if((redata[0].c32 == "Y_15:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_7_a").checked = true;
+                document.getElementById("slbx_7-1").value = redata[0].c33;
+                document.getElementById("slbx_7-2").value = redata[0].c34;
+            }
+
+            if((redata[0].c32 == "Y_17:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_7_b").checked = true;
+                document.getElementById("slbx_7-1").value = redata[0].c33;
+                document.getElementById("slbx_7-2").value = redata[0].c34;
+            }
+
+
+            if((redata[0].c32 == "Y_20:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_7_c").checked = true;
+                document.getElementById("slbx_7-1").value = redata[0].c33;
+                document.getElementById("slbx_7-2").value = redata[0].c34;
+            }
+
+/*
+            if((redata[0].c35 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_8").checked = true;
+                document.getElementById("slbx_8-1").value = redata[0].c36;
+                document.getElementById("slbx_8-2").value = redata[0].c37;
+            }
+
+            if((redata[0].c38 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_9").checked = true;
+                document.getElementById("slbx_9-1").value = redata[0].c39;
+                document.getElementById("slbx_9-2").value = redata[0].c40;
+            }
+*/
+/*
+            if((redata[0].c41 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_10").checked = true;
+                document.getElementById("slbx_10-1").value = redata[0].c42;
+                document.getElementById("slbx_10-2").value = redata[0].c43;
+            }
+
+            if((redata[0].c44 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_11").checked = true;
+                document.getElementById("slbx_11-1").value = redata[0].c45;
+                document.getElementById("slbx_11-2").value = redata[0].c46;
+            }
+
+            if((redata[0].c47 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_12").checked = true;
+                document.getElementById("slbx_12-1").value = redata[0].c48;
+                document.getElementById("slbx_12-2").value = redata[0].c49;
+            }
+
+            if((redata[0].c50 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_13").checked = true;
+                document.getElementById("slbx_13-1").value = redata[0].c51;
+                document.getElementById("slbx_13-2").value = redata[0].c52;
+            }
+
+            if((redata[0].c53 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_14").checked = true;
+                document.getElementById("slbx_14-1").value = redata[0].c54;
+                document.getElementById("slbx_14-2").value = redata[0].c55;
+            }
+
+            if((redata[0].c56 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_15").checked = true;
+                document.getElementById("slbx_15-1").value = redata[0].c57;
+                document.getElementById("slbx_15-2").value = redata[0].c58;
+            }
+
+            if((redata[0].c59 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_16").checked = true;
+                document.getElementById("slbx_16-1").value = redata[0].c60;
+                document.getElementById("slbx_16-2").value = redata[0].c61;
+            }
+
+            if((redata[0].c62 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_17").checked = true;
+                document.getElementById("slbx_17-1").value = redata[0].c63;
+                document.getElementById("slbx_17-2").value = redata[0].c64;
+            }
+*/
+
+        }
+
+
+
+        function Write_ss_value(userid){
+            var 
+                appUrl = 'https://script.google.com/macros/s/AKfycbyYCi6hmEjLzrqtFMZSADQCAfVJ_2qSxTVzTRDXRaiBKBb6SWI/exec',
+                sheetsUrl = 'https://docs.google.com/spreadsheets/d/1pZpwgUFCU8GAIUMitueoPtcbnv2Gz7sUS5a2-PypcpY/edit#gid=0',
+                sheetName = '搭車總表',
+                startRow = 1,
+                startColumn = 3,
+                show = $('#show');
+
+                var parameter = {};
+            
+                //---------------------------------------------------
+                         $('#QueryString').val(userid +"_2");
+                //----------------------------------------------------
+
+                //sendBtn.on('click',function() {
+                
+                parameter = {
+                //url: sheetsUrl.val(),
+                //name: sheetName.val(),
+                //UserID_temp: ": field_info.val(),
+                UserID_temp:  userid,
+                type: "Write",
+                startRow: 1,
+                startColumn: 1
+                };
+                $.get(appUrl,parameter, function(data) {
+                  if(!data[0].st){
+                    show.text('無資料');
+                    //QueryString.text('無資料');
+                  }else{
+                    show.text(data[0].st);
+                    alert('寫入完成');
+                    //$('#QueryString').val(userid +"_4");
+                    
+                    //QueryString.text(yourUserID+"----"+data.toString());
+                  }
+            });
+        }
+
+        function Write_ss_value_1(userid){
+            var 
+                appUrl = 'https://script.google.com/macros/s/AKfycbyYCi6hmEjLzrqtFMZSADQCAfVJ_2qSxTVzTRDXRaiBKBb6SWI/exec',
+                //sheetsUrl = 'https://docs.google.com/spreadsheets/d/1pZpwgUFCU8GAIUMitueoPtcbnv2Gz7sUS5a2-PypcpY/edit#gid=0',
+                //sheetName = '春節搭車',
+                startRow = 1,
+                startColumn = 3,
+                show = $('#show');
+
+                var parameter = {};
+                var data_in =Write_ss_data_in();
+            
+                //---------------------------------------------------
+                         $('#QueryString').val(userid +"_2");
+                //----------------------------------------------------
+
+                //sendBtn.on('click',function() {
+                
+                    parameter = {
+                //url: sheetsUrl.val(),
+                //name: sheetName.val(),
+                //UserID_temp: ": field_info.val(),
+                UserID_temp:  userid,
+                //type: "Write",
+                //data_in:JSON.stringify(data_in),
+                startRow: 1,
+                startColumn: 1,
+//========================================================
+
+                datain_14: data_in[0][0],
+                datain_15: data_in[0][1],
+                datain_16: data_in[0][2],
+                
+                datain_17: data_in[1][0],
+                datain_18: data_in[1][1],
+                datain_19: data_in[1][2],
+                datain_20: data_in[2][0],
+                datain_21: data_in[2][1],
+                datain_22: data_in[2][2],
+
+
+                datain_23: data_in[3][0],
+                datain_24: data_in[3][1],
+                datain_25: data_in[3][2],
+                datain_26: data_in[4][0],
+                datain_27: data_in[4][1],
+                datain_28: data_in[4][2],
+
+
+                datain_29: data_in[5][0],
+                datain_30: data_in[5][1],
+                datain_31: data_in[5][2],
+                datain_32: data_in[6][0],
+                datain_33: data_in[6][1],
+                datain_34: data_in[6][2],
+
+/*
+                datain_35: data_in[7][0],
+                datain_36: data_in[7][1],
+                datain_37: data_in[7][2],
+                datain_38: data_in[8][0],
+                datain_39: data_in[8][1],
+                datain_40: data_in[8][2],
+*/
+/*
+                datain_41: data_in[9][0],
+                datain_42: data_in[9][1],
+                datain_43: data_in[9][2],
+                datain_44: data_in[10][0],
+                datain_45: data_in[10][1],
+                datain_46: data_in[10][2],
+                datain_47: data_in[11][0],
+                datain_48: data_in[11][1],
+                datain_49: data_in[11][2],
+                datain_50: data_in[12][0],
+                datain_51: data_in[12][1],
+                datain_52: data_in[12][2],
+                datain_53: data_in[13][0],
+                datain_54: data_in[13][1],
+                datain_55: data_in[13][2],
+                datain_56: data_in[14][0],
+                datain_57: data_in[14][1],
+                datain_58: data_in[14][2],
+                datain_59: data_in[15][0],
+                datain_60: data_in[15][1],
+                datain_61: data_in[15][2],
+                datain_62: data_in[16][0],
+                datain_63: data_in[16][1],
+                datain_64: data_in[16][2]
+*/
+//========================================================
+
+
+
+
+
+
+                };
+                /*
+                $.get(appUrl,parameter, function(data) {
+                  if(!data[0].st){
+                    show.text('無資料');
+                    //QueryString.text('無資料');
+                  }else{
+                    show.text(data[0].st);
+                    alert('寫入完成');
+                    //$('#QueryString').val(userid +"_4");
+                    
+                    //QueryString.text(yourUserID+"----"+data.toString());
+                  }
+            });
+            */
+            $.ajax({
+                    type: 'post',
+                    url: appUrl,
+                    dataType:"json",
+                    error:function(xhr){
+                        alert('error')
+                    },
+                    data:parameter,
+                      success: function(redata) {
+                        //alert('送出');
+                        liff.sendMessages([
+                            {
+                                type: 'text',
+                                text: '2025 國慶連假 車輛登記查詢'
+                            }
+                        ])
+                        .then(() => {
+                        //alert('done');
+                        liff.closeWindow();
+                    })
+                        //alert('登記資料已送出');
+                        //liff.closeWindow();
+/*
+                        if(!data[0].st){
+                        show.text('無資料');
+                        //QueryString.text('無資料');
+                         }else{
+                          show.text(data[0].st);
+                         alert('寫入完成');
+                        //$('#QueryString').val(userid +"_4");
+                       //QueryString.text(yourUserID+"----"+data.toString());
+                            }
+                            */
+                        }
+                });
+
+
+        }
+
+
+        function Write_ss_data_in(){
+
+            //var data_in =[];
+            //var data_in = [];
+                //data_in[0] = [];
+                var data_in = [];
+            for (i = 0 ; i < 20 ; i++) {
+
+                data_in[i] = [];
+                }
+
+                var ckBt;
+                //data_in[0][0]="no";
+                //data_in[0][1]=0;
+                //data_in[0][2]=2;
+            /*
+            ckBt =document.getElementById("ckbx_1").checked;
+                if (ckBt==true){
+                    data_in[0][0]="Y";
+                    data_in[0][1]=document.getElementById("slbx_1-1").value;
+                    data_in[0][2]=document.getElementById("slbx_1-2").value;
+                }
+                else
+                {
+                    data_in[0][0]="no";
+                    data_in[0][1]=0;
+                    data_in[0][2]=1;
+                }
+                */
+            /*
+            for (i=0 ; i<=20;i++){
+                x=i+1;
+                ckBt =document.getElementById("ckbx_" + x).checked;
+                if (ckBt==true){
+                    data_in[i][0]="Y";
+                    data_in[i][1]=document.getElementById("slbx_" + x + "-1").value;
+                    data_in[i][2]=document.getElementById("slbx_" + x + "-2").value;
+    
+                }
+                else
+                {
+                    data_in[i][0]="no";
+                    data_in[i][1]=0;
+                    data_in[i][2]=0;
+                }
+
+            }
+         */
+         //-------------------------------------
+         
+            ckBt =document.getElementById("ckbx_1").checked;
+            if (ckBt==true){
+                data_in[0][0]="Y";
+                data_in[0][1]=document.getElementById("slbx_1-1").value;
+                data_in[0][2]=document.getElementById("slbx_1-2").value;
+            }
+            else
+            {
+                data_in[0][0]="no";
+                data_in[0][1]=1;
+                data_in[0][2]=0;
+            }
+
+            ckBt =document.getElementById("ckbx_2").checked;
+            if (ckBt==true){
+                data_in[1][0]="Y";
+                data_in[1][1]=document.getElementById("slbx_2-1").value;
+                data_in[1][2]=document.getElementById("slbx_2-2").value;
+            }
+            else
+            {
+                data_in[1][0]="no";
+                data_in[1][1]=1;
+                data_in[1][2]=0;
+            }
+            
+/*            
+            ckBt =document.getElementById("ckbx_3").checked;
+            ckBt_a =document.getElementById("ckbx_3_a").checked;
+            ckBt_b =document.getElementById("ckbx_3_b").checked;
+            ckBt_C =document.getElementById("ckbx_3_c").checked;
+
+            if (ckBt==true){
+                //data_in[2][0]="Y";
+                if(ckBt_a==true){data_in[2][0]="Y1400";};
+                if(ckBt_b==true){data_in[2][0]="Y1700";};
+                if(ckBt_c==true){data_in[2][0]="Y2000";};
+                //data_in[2][0]="Y";
+                data_in[2][1]=document.getElementById("slbx_3-1").value;
+                data_in[2][2]=document.getElementById("slbx_3-2").value;
+            }
+            else
+            {
+                data_in[2][0]="no";
+                data_in[2][1]=1;
+                data_in[2][2]=0;
+            }
+*/
+
+
+            //回程三個時段的判斷與填資料，第一天
+                ratings = document.getElementsByName('radio_3');
+            for (const rating of ratings) 
+            {
+                if (rating.checked) {
+                    data_in[2][0]=`${rating.value}`;
+                    data_in[2][1]=document.getElementById("slbx_3-1").value;
+                    data_in[2][2]=document.getElementById("slbx_3-2").value;
+                    break;//跳出迴圈，否則得到的結果會被後面蓋掉
+                }
+                else
+                {
+                    data_in[2][0]="no";
+                    data_in[2][1]=1;
+                    data_in[2][2]=0;
+                }
+            }
+
+
+            ckBt =document.getElementById("ckbx_4").checked;
+            if (ckBt==true){
+                data_in[3][0]="Y";
+                data_in[3][1]=document.getElementById("slbx_4-1").value;
+                data_in[3][2]=document.getElementById("slbx_4-2").value;
+            }
+            else
+            {
+                data_in[3][0]="no";
+                data_in[3][1]=1;
+                data_in[3][2]=0;
+            }
+
+/*
+            ckBt =document.getElementById("ckbx_5").checked;
+            if (ckBt==true){
+                data_in[4][0]="Y";
+                data_in[4][1]=document.getElementById("slbx_5-1").value;
+                data_in[4][2]=document.getElementById("slbx_5-2").value;
+            }
+            else
+            {
+                data_in[4][0]="no";
+                data_in[4][1]=1;
+                data_in[4][2]=0;
+            }
+*/
+
+            //回程三個時段的判斷與填資料，第二天
+                ratings = document.getElementsByName('radio_5');
+            for (const rating of ratings) 
+            {
+                if (rating.checked) {
+                    data_in[4][0]=`${rating.value}`;
+                    data_in[4][1]=document.getElementById("slbx_5-1").value;
+                    data_in[4][2]=document.getElementById("slbx_5-2").value;
+                    break;//跳出迴圈，否則得到的結果會被後面蓋掉
+                }
+                else
+                {
+                    data_in[4][0]="no";
+                    data_in[4][1]=1;
+                    data_in[4][2]=0;
+                }
+            }
+
+            ckBt =document.getElementById("ckbx_6").checked;
+            if (ckBt==true){
+                data_in[5][0]="Y";
+                data_in[5][1]=document.getElementById("slbx_6-1").value;
+                data_in[5][2]=document.getElementById("slbx_6-2").value;
+            }
+            else
+            {
+                data_in[5][0]="no";
+                data_in[5][1]=1;
+                data_in[5][2]=0;
+            }
+            
+/*
+            ckBt =document.getElementById("ckbx_7").checked;
+            if (ckBt==true){
+                data_in[6][0]="Y";
+                data_in[6][1]=document.getElementById("slbx_7-1").value;
+                data_in[6][2]=document.getElementById("slbx_7-2").value;
+            }
+            else
+            {
+                data_in[6][0]="no";
+                data_in[6][1]=1;
+                data_in[6][2]=0;
+            }
+*/
+
+            //回程三個時段的判斷與填資料，第二天
+                ratings = document.getElementsByName('radio_7');
+            for (const rating of ratings) 
+            {
+                if (rating.checked) {
+                    data_in[6][0]=`${rating.value}`;
+                    data_in[6][1]=document.getElementById("slbx_7-1").value;
+                    data_in[6][2]=document.getElementById("slbx_7-2").value;
+                    break;//跳出迴圈，否則得到的結果會被後面蓋掉
+                }
+                else
+                {
+                    data_in[6][0]="no";
+                    data_in[6][1]=1;
+                    data_in[6][2]=0;
+                }
+            }
+
+
+/*
+            ckBt =document.getElementById("ckbx_8").checked;
+            if (ckBt==true){
+                data_in[7][0]="Y";
+                data_in[7][1]=document.getElementById("slbx_8-1").value;
+                data_in[7][2]=document.getElementById("slbx_8-2").value;
+            }
+            else
+            {
+                data_in[7][0]="no";
+                data_in[7][1]=1;
+                data_in[7][2]=0;
+            }
+            ckBt =document.getElementById("ckbx_9").checked;
+            if (ckBt==true){
+                data_in[8][0]="Y";
+                data_in[8][1]=document.getElementById("slbx_9-1").value;
+                data_in[8][2]=document.getElementById("slbx_9-2").value;
+            }
+            else
+            {
+                data_in[8][0]="no";
+                data_in[8][1]=1;
+                data_in[8][2]=0;
+            }
+*/
+
+/*
+            ckBt =document.getElementById("ckbx_10").checked;
+            if (ckBt==true){
+                data_in[9][0]="Y";
+                data_in[9][1]=document.getElementById("slbx_10-1").value;
+                data_in[9][2]=document.getElementById("slbx_10-2").value;
+            }
+            else
+            {
+                data_in[9][0]="no";
+                data_in[9][1]=1;
+                data_in[9][2]=0;
+            }
+
+            ckBt =document.getElementById("ckbx_11").checked;
+            if (ckBt==true){
+                data_in[10][0]="Y";
+                data_in[10][1]=document.getElementById("slbx_11-1").value;
+                data_in[10][2]=document.getElementById("slbx_11-2").value;
+            }
+            else
+            {
+                data_in[10][0]="no";
+                data_in[10][1]=1;
+                data_in[10][2]=0;
+            }
+            ckBt =document.getElementById("ckbx_12").checked;
+            if (ckBt==true){
+                data_in[11][0]="Y";
+                data_in[11][1]=document.getElementById("slbx_12-1").value;
+                data_in[11][2]=document.getElementById("slbx_12-2").value;
+            }
+            else
+            {
+                data_in[11][0]="no";
+                data_in[11][1]=1;
+                data_in[11][2]=0;
+            }
+            ckBt =document.getElementById("ckbx_13").checked;
+            if (ckBt==true){
+                data_in[12][0]="Y";
+                data_in[12][1]=document.getElementById("slbx_13-1").value;
+                data_in[12][2]=document.getElementById("slbx_13-2").value;
+            }
+            else
+            {
+                data_in[12][0]="no";
+                data_in[12][1]=1;
+                data_in[12][2]=0;
+            }
+            ckBt =document.getElementById("ckbx_14").checked;
+            if (ckBt==true){
+                data_in[13][0]="Y";
+                data_in[13][1]=document.getElementById("slbx_14-1").value;
+                data_in[13][2]=document.getElementById("slbx_14-2").value;
+            }
+            else
+            {
+                data_in[13][0]="no";
+                data_in[13][1]=1;
+                data_in[13][2]=0;
+            }
+            ckBt =document.getElementById("ckbx_15").checked;
+            if (ckBt==true){
+                data_in[14][0]="Y";
+                data_in[14][1]=document.getElementById("slbx_15-1").value;
+                data_in[14][2]=document.getElementById("slbx_15-2").value;
+            }
+            else
+            {
+                data_in[14][0]="no";
+                data_in[14][1]=1;
+                data_in[14][2]=0;
+            }
+            ckBt =document.getElementById("ckbx_16").checked;
+            if (ckBt==true){
+                data_in[15][0]="Y";
+                data_in[15][1]=document.getElementById("slbx_16-1").value;
+                data_in[15][2]=document.getElementById("slbx_16-2").value;
+            }
+            else
+            {
+                data_in[15][0]="no";
+                data_in[15][1]=1;
+                data_in[15][2]=0;
+            }
+            ckBt =document.getElementById("ckbx_17").checked;
+            if (ckBt==true){
+                data_in[16][0]="Y";
+                data_in[16][1]=document.getElementById("slbx_17-1").value;
+                data_in[16][2]=document.getElementById("slbx_17-2").value;
+            }
+            else
+            {
+                data_in[16][0]="no";
+                data_in[16][1]=1;
+                data_in[16][2]=0;
+            }
+*/
+         //-------------------------------------   
+            return data_in;
+        }
+
+
+
+
+
+
+        $(document).ready(function () {
+            //init LIFF
+            initializeLiff(YourLiffAppId);
+/*
+            window.onload = function () {
+                read_ss_value(document.getElementById("field_info").value);
+                get_ss_value(document.getElementById("field_info").value);
+            };
+            */
+            //read_ss_value(document.getElementById("field_info").value);
+
+
+            $('#ButtonScan').click(() => {
+                liff.scanCode().then((ret) => {
+                    //alert(JSON.stringify(ret));
+                    $('#field_info').val(ret.value);
+                }, (err) => {
+                    alert(JSON.stringify(err));
+                }
+                );
+            });
+
+            $('#ButtonGetOS').click(() => {
+                var info = liff.getOS();
+                $('#field_info').val(info);
+            });
+
+            $('#ButtonGetLanguage').click(() => {
+                var info = liff.getLanguage();
+                $('#field_info').val(info);
+            });
+
+            //ButtonGetProfile
+            $('#ButtonGetProfile').click(() => {
+                //取得User Proile
+                liff.getProfile().then(
+                    (profile) => {
+                        //顯示在text box中
+                        $('#field_info').val(profile.displayName);
+                        //可以alert
+                        alert('done');
+                    }
+                );
+            });
+
+
+       
+            //ButtonGetName
+            $('#ButtonGetName').click(() => {
+                read_ss_value(document.getElementById("field_info").value);
+            });
+
+            //ButtonGetData
+            $('#ButtonGetData').click(() => {
+                read_ss_value(document.getElementById("field_info").value);
+                get_ss_value(document.getElementById("field_info").value);
+                //document.getElementById("checkbox_list").style.display="inline";
+            });
+
+            //ButtonWriteName
+            $('#ButtonWriteName').click(() => {
+                //Write_ss_value(document.getElementById("field_info").value);
+                Write_ss_value_1(document.getElementById("field_info").value);
+                //write_but_click(document.getElementById("field_info").value);
+
+            });
+
+            //ButtonSendMsg
+            $('#ButtonSendMsg').click(function () {
+                liff.sendMessages([
+                    {
+                        type: 'text',
+                        text: $('#msg').val()
+                    }
+                ])
+                    .then(() => {
+                        alert('done');
+                    })
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <!--<body background="59569394.jpg"     >--> 
+
+    <div class="row">
+        <div id="MainDiv" class="col-md-6" style="margin:5px">
+            <h2 id="show"></h2>
+            <h3 id="rpValue"></h3>
+
+            <button class="btn btn-primary" id="ButtonGetData">請按鈕，載入登記資料</button>
+            <br/><br/>
+
+        <!--//------------------------------------------------------------------------------  --> 
+    <div id="checkbox_list" style="display:none">
+    <!--<div id="checkbox_list" >-->
+    <div id="text_list">
+     <!--<div id="checkbox_list" >-->
+
+    <!---->
+    <div id="list_1" >
+    <br/>
+    <p >
+
+    <!--
+     <label class="check-label-title" style="border-style:ridge" font color="#FF0000" id="Date_D1_3_0">2023/08/31</label>
+    -->
+    <!--
+     <label class="check-label-title" style="border-style:ridge" font color="#FF0000" id="Date_D1_3_0">晚上去市區</label>
+    -->
+     <label class="check-label-title" style="border-style:ridge" font color="#FF0000" id="Date_D1_3_0"></label> <!--2023/08/31-->
+
+     <!--  
+        <label class="check-label-title" >本日無派車安排</label>  
+        <div style="display:none">
+    -->
+    <input type="checkbox" class="check_me" value="1" id="ckbx_1" >
+    <label class="check_me_label" for="ckbx_1"></label>
+     <!--  
+    <label class="form-check-label" for="ckbx_1" >2023/08/31(週四) 晚上去市區</label> <br/>     -->   <!--2022/12/31(週六) 晚上去市區-->
+
+    <label class="form-check-label" for="ckbx_1"  id="Date_D1_3_w"></label> <br/> <!--2023/08/31(週四) 晚上去市區-->
+    <label class="form-check-label" for="ckbx_1">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_1-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_1">位；</label>
+    <label class="form-check-label" for="ckbx_1">大型行李</label>
+    <select name="select_box_1" id="slbx_1-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_1">件</label>
+
+    <!-- </div> -->
+
+
+    </p><br/>
+
+    </div>
+    <br/>
+
+    <div id="list_2" >
+        <br/>
+    <p>
+    <!--<label class="check-label-title" style="border-style:ridge" id="Date_D2_1_0">2023/09/01</label>-->
+    <label class="check-label-title" style="border-style:ridge" font color="#FF0000" id="Date_D2_1_0"></label> <!--2023/09/01-->
+
+    <input type="checkbox" class="check_me" value="2" id="ckbx_2" >
+        <!--<label class="form-check-label" for="ckbx_2" > 2023/09/01(週五) 去市區</label> <br/> --> <!--2023/01/01(週日) 去市區-->
+        <label class="form-check-label" for="ckbx_2"  id="Date_D2_1_w"></label> <br/> <!--22023/09/01(週五) 去市區-->
+
+    <label class="form-check-label" for="ckbx_2">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_2-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_2">位；</label>
+    <label class="form-check-label" for="ckbx_2">大型行李</label>
+    <select name="select_box_1" id="slbx_2-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_2">件</label>
+    <br/><br/>
+    <!--<input type="checkbox" class="check_me" value="3" id="ckbx_3" >-->
+    <!--<label class="form-check-label" for="ckbx_3" > 2023/09/01(週五) 回廠區</label> <br/>    --> <!--2023/01/01(週日) 回廠區-->
+    <!--<label class="form-check-label" for="ckbx_3"  id="Date_D2_3_w" ></label> <br/>    -->    <!--2023/09/01(週五) 回廠區-->
+<fieldset>
+    <legend><label class="form-check-label" for="ckbx_3"  id="Date_D2_3_w" ></label></legend>
+
+    <div><input type="radio" name="radio_3" class="check_me" value="Y_15:00" id="ckbx_3_a" >   <label class="form-check-label" for="ckbx_3_a" > 14:00</label></div> 
+    <br/>
+    <div><input type="radio" name="radio_3" class="check_me" value="Y_17:00" id="ckbx_3_b" >   <label class="form-check-label" for="ckbx_3_b" > 17:00</label></div>
+    <br/>
+    <div><input type="radio" name="radio_3" class="check_me" value="Y_20:00" id="ckbx_3_c" >   <label class="form-check-label" for="ckbx_3_c" > 20:00</label></div>
+    <br/>
+
+    <label class="form-check-label" for="ckbx_3">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_3-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_3">位；</label>
+    <label class="form-check-label" for="ckbx_3">大型行李</label>
+    <select name="select_box_1" id="slbx_3-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_3">件</label>
+
+    </p><br/>
+    </div>
+</fieldset>
+
+
+    <br/>
+    
+    <p>
+    <!--<label class="check-label-title" style="border-style:ridge">2023/09/02</label>-->
+    <label class="check-label-title" style="border-style:ridge" id="Date_D3_1_0"></label>
+    <!--<label class="check-label-title" >本日無派車安排</label>-->
+
+    <input type="checkbox" class="check_me" value="4" id="ckbx_4" >
+    <label class="check_me_label" for="ckbx_4"></label>
+    <!--<label class="form-check-label" for="ckbx_4" >2023/09/02(週六) 去市區</label> <br/>-->
+    <label class="form-check-label" for="ckbx_4" id="Date_D3_1_w"></label> <br/>
+    <label class="form-check-label" for="ckbx_4">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_4-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_4">位；</label>
+    <label class="form-check-label" for="ckbx_4">大型行李</label>
+    <select name="select_box_1" id="slbx_4-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_4">件</label>
+    <br/><br/>
+    <!--<input type="checkbox" class="check_me" value="5" id="ckbx_5" >-->
+    <label class="check_me_label" for="ckbx_5"></label>
+    <!--<label class="form-check-label" for="ckbx_5" >2023/09/02(週六) 回廠區</label> <br/>-->
+    <label class="form-check-label" for="ckbx_5" id="Date_D3_3_w"></label> <br/>
+
+    <div><input type="radio" name="radio_5" class="check_me" value="Y_15:00" id="ckbx_5_a" >   <label class="form-check-label" for="ckbx_5_a" > 14:00</label></div> 
+    <br/>
+    <div><input type="radio" name="radio_5" class="check_me" value="Y_17:00" id="ckbx_5_b" >   <label class="form-check-label" for="ckbx_5_b" > 17:00</label></div>
+    <br/>
+    <div><input type="radio" name="radio_5" class="check_me" value="Y_20:00" id="ckbx_5_c" >   <label class="form-check-label" for="ckbx_5_c" > 20:00</label></div>
+    <br/>
+
+
+    <label class="form-check-label" for="ckbx_5">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_5-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_5">位；</label>
+    <label class="form-check-label" for="ckbx_5">大型行李</label>
+    <select name="select_box_1" id="slbx_5-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_5">件</label>
+
+
+    </p><br/>
+
+
+
+
+    
+    <p>
+    <!--<label class="check-label-title" style="border-style:ridge">2023/09/03</label>-->
+
+    <label class="check-label-title" style="border-style:ridge" id="Date_D4_1_0"></label>
+    <input type="checkbox" class="check_me" value="6" id="ckbx_6" >
+    <label class="check_me_label" for="ckbx_6"></label>
+
+    <!--<label class="form-check-label" for="ckbx_6" >2023/09/03(週日) 去市區</label> <br/>-->
+
+    <label class="form-check-label" for="ckbx_6" id="Date_D4_1_w"></label> <br/>
+    <label class="form-check-label" for="ckbx_6">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_6-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_6">位</label>
+    <label class="form-check-label" for="ckbx_6">大型行李</label>
+    <select name="select_box_1" id="slbx_6-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_6">件</label>
+    <br/><br/>
+    <!--<input type="checkbox" class="check_me" value="7" id="ckbx_7" >-->
+    <label class="check_me_label" for="ckbx_7"></label>
+
+    <!--<label class="form-check-label" for="ckbx_7" >2023/09/03(週日) 回廠區</label> <br/>-->
+
+    <label class="form-check-label" for="ckbx_7" id="Date_D4_3_w"></label> <br/>
+
+    <div><input type="radio" name="radio_7" class="check_me" value="Y_15:00" id="ckbx_7_a" >   <label class="form-check-label" for="ckbx_7_a" > 14:00</label></div> 
+    <br/>
+    <div><input type="radio" name="radio_7" class="check_me" value="Y_17:00" id="ckbx_7_b" >   <label class="form-check-label" for="ckbx_7_b" > 17:00</label></div>
+    <br/>
+    <div><input type="radio" name="radio_7" class="check_me" value="Y_20:00" id="ckbx_7_c" >   <label class="form-check-label" for="ckbx_7_c" > 20:00</label></div>
+    <br/>
+
+    <label class="form-check-label" for="ckbx_7">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_7-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_7">位</label>
+    <label class="form-check-label" for="ckbx_7">大型行李</label>
+    <select name="select_box_1" id="slbx_7-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_7">件</label>
+    </p><br/>
+
+
+
+    <!--
+    <p>
+    <label class="check-label-title" style="border-style:ridge">2023/05/02</label>
+    <input type="checkbox" class="check_me" value="8" id="ckbx_8" >
+    <label class="check_me_label" for="ckbx_8"></label>
+    <label class="form-check-label" for="ckbx_8" >2023/05/02(週二) 去市區</label> <br/>
+    <label class="form-check-label" for="ckbx_8">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_8-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_8">位</label>
+    <label class="form-check-label" for="ckbx_8">大型行李</label>
+    <select name="select_box_1" id="slbx_8-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_8">件</label>
+    <br/><br>
+    <input type="checkbox" class="check_me" value="9" id="ckbx_9" >
+    <label class="check_me_label" for="ckbx_9"></label>
+    <label class="form-check-label" for="ckbx_9" >2023/05/02(週二) 回廠區</label> <br/>
+    <label class="form-check-label" for="ckbx_9">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_9-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_9">位</label>
+    <label class="form-check-label" for="ckbx_9">大型行李</label>
+    <select name="select_box_1" id="slbx_9-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="">件</label>
+    </p><br/>
+    -->
+
+    <!--
+    <p>
+    <label class="check-label-title" style="border-style:ridge">2/14</label>
+    <input type="checkbox" class="check_me" value="10" id="ckbx_10" >
+    <label class="check_me_label" for="ckbx_10"></label>
+    <label class="form-check-label" for="ckbx_10" >2/14 去市區</label> <br/>
+    <label class="form-check-label" for="ckbx_10">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_10-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_10">位</label>
+    <label class="form-check-label" for="ckbx_10">大型行李</label>
+    <select name="select_box_1" id="slbx_10-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_10">件</label>
+    <br/><br/>
+    <input type="checkbox" class="check_me" value="11" id="ckbx_11" >
+    <label class="check_me_label" for="ckbx_11"></label>
+    <label class="form-check-label" for="ckbx_11" >2/14 回廠區</label> <br/>
+    <label class="form-check-label" for="ckbx_11">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_11-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_11">位</label>
+    <label class="form-check-label" for="ckbx_11">大型行李</label>
+    <select name="select_box_1" id="slbx_11-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_11">件</label>
+    </p><br/>
+
+    <p>
+    <label class="check-label-title" style="border-style:ridge">2/15</label>
+    <input type="checkbox" class="check_me" value="12" id="ckbx_12" >
+    <label class="check_me_label" for="ckbx_12"></label>
+    <label class="form-check-label" for="ckbx_12" >2/15 去市區</label> <br/>
+    <label class="form-check-label" for="ckbx_12">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_12-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_12">位</label>
+    <label class="form-check-label" for="ckbx_12">大型行李</label>
+    <select name="select_box_1" id="slbx_12-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_12">件</label>
+    <br/><br/>
+    <input type="checkbox" class="check_me" value="13" id="ckbx_13" >
+    <label class="check_me_label" for="ckbx_13"></label>
+    <label class="form-check-label" for="ckbx_13" >2/15 回廠區</label> <br/>
+    <label class="form-check-label" for="ckbx_13">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_13-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_13">位</label>
+    <label class="form-check-label" for="ckbx_13">大型行李</label>
+    <select name="select_box_1" id="slbx_13-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_13">件</label>
+    </p><br/>
+
+    <p>
+    <label class="check-label-title" style="border-style:ridge">2/16</label>
+    <input type="checkbox" class="check_me" value="14" id="ckbx_14" >
+    <label class="check_me_label" for="ckbx_14"></label>
+    <label class="form-check-label" for="ckbx_14" >2/16 去市區</label> <br/>
+    <label class="form-check-label" for="ckbx_14">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_14-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_14">位</label>
+    <label class="form-check-label" for="ckbx_14">大型行李</label>
+    <select name="select_box_1" id="slbx_14-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_14">件</label>
+    <br/><br/>
+    <input type="checkbox" class="check_me" value="15" id="ckbx_15" >
+    <label class="check_me_label" for="ckbx_15"></label>
+    <label class="form-check-label" for="ckbx_15" >2/16 回廠區</label> <br/>
+    <label class="form-check-label" for="ckbx_15">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_15-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_15">位</label>
+    <label class="form-check-label" for="ckbx_15">大型行李</label>
+    <select name="select_box_1" id="slbx_15-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_15">件</label>
+    </p><br/>
+
+    <p>
+    <label class="check-label-title" style="border-style:ridge">2/17</label>
+    <input type="checkbox" class="check_me" value="16" id="ckbx_16" >
+    <label class="check_me_label" for="ckbx_16"></label>
+    <label class="form-check-label" for="ckbx_16" >2/17 去市區</label> <br/>
+    <label class="form-check-label" for="ckbx_16">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_16-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_16">位</label>
+    <label class="form-check-label" for="ckbx_16">大型行李</label>
+    <select name="select_box_1" id="slbx_16-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_16">件</label>
+    <br/><br/>
+    <input type="checkbox" class="check_me" value="17" id="ckbx_17" >
+    <label class="check_me_label" for="ckbx_17"></label>
+    <label class="form-check-label" for="ckbx_17" >2/17 回廠區</label> <br/>
+    <label class="form-check-label" for="ckbx_17">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_17-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_17">位</label>
+    <label class="form-check-label" for="ckbx_17">大型行李</label>
+    <select name="select_box_1" id="slbx_17-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_17">件</label>
+    </p><br/>
+-->
+
+
+<br/>
+    <button class="btn btn-primary" id="ButtonWriteName">送出登記資料</button>
+
+
+</div>
+        <!--//------------------------------------------------------------------------------  -->   
+
+
+        <div style="display:none">
+
+            <div id="Line_login" >
+            <label>QueryString_12-63:</label>
+            <input class="form-control" type="text" id="QueryString" /><br />
+            <label>info:</label>
+            <textarea class="form-control" rows="3" type="text" id="field_info"></textarea>   <br />
+            <button class="btn btn-primary" id="ButtonGetOS">Get OS info</button>
+            <button class="btn btn-primary" id="ButtonGetLanguage">Get Language</button>
+            <button class="btn btn-primary" id="ButtonScan">掃描 QR Code</button>
+            <button class="btn btn-primary" id="ButtonGetProfile">Get User Profile</button>
+            <button class="btn btn-primary" id="ButtonGetName">Get User name</button>
+            <button class="btn btn-primary" id="ButtonWriteName">Write User name</button>
+            <button class="btn btn-primary" id="ButtonGetData">Get SS Data</button>
+            <hr />
+            <label>要傳送的訊息:</label>
+            <input class="form-control" type="text" id="msg" value="測試文字" /><br />
+            <button class="btn btn-primary" id="ButtonSendMsg">要傳送的訊息</button>
+            <hr />
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+    <script>
+        //var date = Date.now();
+        var Start_Date_Day1 = '2025/08/30'//'2023/12/30'  //'2023/08/31'
+        var Start_Date_Day2 = new Date(Start_Date_Day1);
+        var Start_Date_Day3 = new Date(Start_Date_Day1);
+        var Start_Date_Day4 = new Date(Start_Date_Day1);
+
+        Start_Date_Day2.setDate(Start_Date_Day2.getDate() + 2-1); 
+        Start_Date_Day3.setDate(Start_Date_Day3.getDate() + 3-1); 
+        Start_Date_Day4.setDate(Start_Date_Day4.getDate() + 4-1); 
+
+
+        function Display_date(Start_Date){
+            var return_Date=[];
+            var Date_Temp = new Date(Start_Date);
+            const Date_Temp_format = dayjs(Date_Temp).format("YYYY/MM/DD");
+            //console.log(Date_Temp);
+            //console.log(Date_Temp.getDay());
+            var days_abbr = ['(週日)','(週一)','(週二)','(週三)','(週四)','(週五)','(週六)'];
+
+            //console.log(days_abbr[Date_Temp.getDay()]);
+            var Date_Temp_GetDay=days_abbr[Date_Temp.getDay()];
+            //console.log(Date_Temp_GetDay);
+
+            return_Date[0] = Date_Temp_format;
+            return_Date[1] = Date_Temp_format +" "+ Date_Temp_GetDay;
+            return return_Date;
+        }
+        var Display_date_temp =[];
+
+        Display_date_temp= Display_date(Start_Date_Day1);
+        //alert(Display_date_temp[1]);
+
+        document.getElementById('Date_D1_3_0').innerHTML = Display_date_temp[0]  ;
+        document.getElementById('Date_D1_3_w').innerHTML = Display_date_temp[1] + ' 晚上去市區' ;
+
+        Display_date_temp= Display_date(Start_Date_Day2);
+        document.getElementById('Date_D2_1_0').innerHTML = Display_date_temp[0]  ;
+        document.getElementById('Date_D2_1_w').innerHTML = Display_date_temp[1] + ' 去市區' ;
+        document.getElementById('Date_D2_3_w').innerHTML = Display_date_temp[1] + ' 回廠區' ;
+
+        Display_date_temp= Display_date(Start_Date_Day3);
+        document.getElementById('Date_D3_1_0').innerHTML = Display_date_temp[0]  ;
+        document.getElementById('Date_D3_1_w').innerHTML = Display_date_temp[1] + ' 去市區' ;
+        document.getElementById('Date_D3_3_w').innerHTML = Display_date_temp[1] + ' 回廠區' ;
+
+        Display_date_temp= Display_date(Start_Date_Day4);
+        document.getElementById('Date_D4_1_0').innerHTML = Display_date_temp[0]  ;
+        document.getElementById('Date_D4_1_w').innerHTML = Display_date_temp[1] + ' 去市區' ;
+        document.getElementById('Date_D4_3_w').innerHTML = Display_date_temp[1] + ' 回廠區' ;
+
+        //console.log(Display_date_temp[0]);
+        //console.log(Display_date_temp[1]);
+        //Date_D1_3_0 =Display_date_temp[0];
+        //Date_D1_3_0_W=Display_date_temp[1];
+
+        //alert(  Display_date_temp[1]);
+
+
+        //$('#Date_D1_3_0_W').text(Display_date_temp[1]);
+        //document.getElementById('Date_D1_3_0').innerHTML = Display_date_temp[1] + '123' + document.getElementById('Date_D1_3_0').value;
+
+        //document.getElementById("Date_D1_3_0").value = Display_date_temp[1];
+        //$('#Date_D1_3_0').text('無資料');
+
+    </script>
+
+</body>
+</html>
+
