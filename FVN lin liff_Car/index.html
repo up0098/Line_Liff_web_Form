@@ -301,6 +301,7 @@ input.check_me {
 */
 
 
+
         function read_ss_value(userid){
         var 
             appUrl = 'https://script.google.com/macros/s/AKfycbyYCi6hmEjLzrqtFMZSADQCAfVJ_2qSxTVzTRDXRaiBKBb6SWI/exec',
@@ -1206,7 +1207,17 @@ input.check_me {
         }
 
 
-
+//radio 取消功能//2025/08/28 wei
+$(function(){
+	$('input[type="radio"]').on('mousedown',function(evt){
+		evt.preventDefault();
+		this.checked=!this.checked;
+	}).on('mouseup',function(evt){
+		evt.preventDefault();
+	}).on('click',function(evt){
+		evt.preventDefault();
+	});
+});
 
 
 
