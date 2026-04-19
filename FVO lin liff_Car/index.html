@@ -156,7 +156,7 @@ input.check_me {
        </style>  
     
     <meta charset="utf-8" />
-    <title> 2025 國慶連假 車輛登記-FVO</title>
+    <title> 2026 勞動節連假 車輛登記-FVO</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- bootstrap 4.3.1 -->
@@ -405,6 +405,8 @@ input.check_me {
                 document.getElementById("slbx_1-2").value = redata[0].c16;
             }
 */
+
+//第一天
             if((redata[0].c17 == "Y")){
                 //document.getElementById("ckbx_1").checked=true;
                 document.getElementById("ckbx_2").checked = true;
@@ -412,6 +414,99 @@ input.check_me {
                 document.getElementById("slbx_2-2").value = redata[0].c19;
             }
 
+            if((redata[0].c20 == "Y_15:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_3_a").checked = true;
+                document.getElementById("slbx_3-1").value = redata[0].c21;
+                document.getElementById("slbx_3-2").value = redata[0].c22;
+            }
+
+            if((redata[0].c20 == "Y_19:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_3_b").checked = true;
+                document.getElementById("slbx_3-1").value = redata[0].c21;
+                document.getElementById("slbx_3-2").value = redata[0].c22;
+            }
+
+//第二天
+            if((redata[0].c23 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_4").checked = true;
+                document.getElementById("slbx_4-1").value = redata[0].c24;
+                document.getElementById("slbx_4-2").value = redata[0].c25;
+            }
+
+            if((redata[0].c26 == "Y_15:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_5_a").checked = true;
+                document.getElementById("slbx_5-1").value = redata[0].c27;
+                document.getElementById("slbx_5-2").value = redata[0].c28;
+            }
+
+            if((redata[0].c26 == "Y_19:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_5_b").checked = true;
+                document.getElementById("slbx_5-1").value = redata[0].c27;
+                document.getElementById("slbx_5-2").value = redata[0].c28;
+            }
+
+//第三天
+            if((redata[0].c29 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_6").checked = true;
+                document.getElementById("slbx_6-1").value = redata[0].c30;
+                document.getElementById("slbx_6-2").value = redata[0].c31;
+            }
+
+            if((redata[0].c32 == "Y_15:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_7_a").checked = true;
+                document.getElementById("slbx_7-1").value = redata[0].c33;
+                document.getElementById("slbx_7-2").value = redata[0].c34;
+            }
+
+            if((redata[0].c32 == "Y_19:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_7_b").checked = true;
+                document.getElementById("slbx_7-1").value = redata[0].c33;
+                document.getElementById("slbx_7-2").value = redata[0].c34;
+            }
+
+
+//第四天
+            if((redata[0].c35 == "Y")){
+                //document.getElementById("ckbx_1").checked=true;
+                document.getElementById("ckbx_8").checked = true;
+                document.getElementById("slbx_8-1").value = redata[0].c36;
+                document.getElementById("slbx_8-2").value = redata[0].c37;
+            }
+
+            if((redata[0].c38 == "Y_15:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_9_a").checked = true;
+                document.getElementById("slbx_9-1").value = redata[0].c39;
+                document.getElementById("slbx_9-2").value = redata[0].c40;
+            }
+
+            if((redata[0].c38 == "Y_19:00")){
+                //document.getElementById("ckbx_1").checked=true;
+                //document.getElementById("ckbx_3").checked = true;
+                document.getElementById("ckbx_9_b").checked = true;
+                document.getElementById("slbx_9-1").value = redata[0].c39;
+                document.getElementById("slbx_9-2").value = redata[0].c40;
+            }
+
+
+
+
+/*
             if((redata[0].c20 == "Y")){
                 //document.getElementById("ckbx_1").checked=true;
                 document.getElementById("ckbx_3").checked = true;
@@ -432,7 +527,7 @@ input.check_me {
                 document.getElementById("slbx_5-1").value = redata[0].c27;
                 document.getElementById("slbx_5-2").value = redata[0].c28;
             }
-
+*/
 /*
             if((redata[0].c26 == "Y-HCM")){
                 //document.getElementById("ckbx_1").checked=true;
@@ -456,7 +551,7 @@ input.check_me {
             }
 */
 
-
+/*
             if((redata[0].c29 == "Y")){
                 //document.getElementById("ckbx_1").checked=true;
                 document.getElementById("ckbx_6").checked = true;
@@ -470,7 +565,7 @@ input.check_me {
                 document.getElementById("slbx_7-1").value = redata[0].c33;
                 document.getElementById("slbx_7-2").value = redata[0].c34;
             }
-            
+*/
 /*
             if((redata[0].c35 == "Y")){
                 //document.getElementById("ckbx_1").checked=true;
@@ -642,14 +737,14 @@ input.check_me {
                 datain_33: data_in[6][1],
                 datain_34: data_in[6][2],
 
-/*
+
                 datain_35: data_in[7][0],
                 datain_36: data_in[7][1],
                 datain_37: data_in[7][2],
                 datain_38: data_in[8][0],
                 datain_39: data_in[8][1],
                 datain_40: data_in[8][2],
-*/
+
 /*
                 datain_41: data_in[9][0],
                 datain_42: data_in[9][1],
@@ -711,7 +806,7 @@ input.check_me {
                         liff.sendMessages([
                             {
                                 type: 'text',
-                                text: '2025 國慶連假 車輛登記查詢'
+                                text: '2026 勞動節連假 車輛登記查詢'
                             }
                         ])
                         .then(() => {
@@ -813,7 +908,7 @@ input.check_me {
             }
 */
 
-
+         //晚上去市區
             ckBt =document.getElementById("ckbx_1").checked;
             if (ckBt==true){
                 data_in[0][0]="Y";
@@ -831,7 +926,7 @@ input.check_me {
 
 
 
-
+         //第一天早上去市區
             ckBt =document.getElementById("ckbx_2").checked;
             if (ckBt==true){
                 data_in[1][0]="Y";
@@ -845,6 +940,125 @@ input.check_me {
                 data_in[1][2]=0;
             }
             
+
+            //回程三個時段的判斷與填資料，第一天
+                ratings = document.getElementsByName('radio_3');
+            for (const rating of ratings) 
+            {
+                if (rating.checked) {
+                    data_in[2][0]=`${rating.value}`;
+                    data_in[2][1]=document.getElementById("slbx_3-1").value;
+                    data_in[2][2]=document.getElementById("slbx_3-2").value;
+                    break;//跳出迴圈，否則得到的結果會被後面蓋掉
+                }
+                else
+                {
+                    data_in[2][0]="no";
+                    data_in[2][1]=1;
+                    data_in[2][2]=0;
+                }
+            }
+
+         //第二天早上去市區
+            ckBt =document.getElementById("ckbx_4").checked;
+            if (ckBt==true){
+                data_in[3][0]="Y";
+                data_in[3][1]=document.getElementById("slbx_4-1").value;
+                data_in[3][2]=document.getElementById("slbx_4-2").value;
+            }
+            else
+            {
+                data_in[3][0]="no";
+                data_in[3][1]=1;
+                data_in[3][2]=0;
+            }
+
+            //回程三個時段的判斷與填資料，第二天
+                ratings = document.getElementsByName('radio_5');
+            for (const rating of ratings) 
+            {
+                if (rating.checked) {
+                    data_in[4][0]=`${rating.value}`;
+                    data_in[4][1]=document.getElementById("slbx_5-1").value;
+                    data_in[4][2]=document.getElementById("slbx_5-2").value;
+                    break;//跳出迴圈，否則得到的結果會被後面蓋掉
+                }
+                else
+                {
+                    data_in[4][0]="no";
+                    data_in[4][1]=1;
+                    data_in[4][2]=0;
+                }
+            }
+
+         //第三天早上去市區
+            ckBt =document.getElementById("ckbx_6").checked;
+            if (ckBt==true){
+                data_in[5][0]="Y";
+                data_in[5][1]=document.getElementById("slbx_6-1").value;
+                data_in[5][2]=document.getElementById("slbx_6-2").value;
+            }
+            else
+            {
+                data_in[5][0]="no";
+                data_in[5][1]=1;
+                data_in[5][2]=0;
+            }
+
+
+            //回程三個時段的判斷與填資料，第三天
+                ratings = document.getElementsByName('radio_7');
+            for (const rating of ratings) 
+            {
+                if (rating.checked) {
+                    data_in[6][0]=`${rating.value}`;
+                    data_in[6][1]=document.getElementById("slbx_7-1").value;
+                    data_in[6][2]=document.getElementById("slbx_7-2").value;
+                    break;//跳出迴圈，否則得到的結果會被後面蓋掉
+                }
+                else
+                {
+                    data_in[6][0]="no";
+                    data_in[6][1]=1;
+                    data_in[6][2]=0;
+                }
+            }
+
+
+         //第四天早上去市區
+            ckBt =document.getElementById("ckbx_8").checked;
+            if (ckBt==true){
+                data_in[7][0]="Y";
+                data_in[7][1]=document.getElementById("slbx_8-1").value;
+                data_in[7][2]=document.getElementById("slbx_8-2").value;
+            }
+            else
+            {
+                data_in[7][0]="no";
+                data_in[7][1]=1;
+                data_in[7][2]=0;
+            }
+
+
+                        //回程三個時段的判斷與填資料，第四天
+                ratings = document.getElementsByName('radio_9');
+            for (const rating of ratings) 
+            {
+                if (rating.checked) {
+                    data_in[8][0]=`${rating.value}`;
+                    data_in[8][1]=document.getElementById("slbx_9-1").value;
+                    data_in[8][2]=document.getElementById("slbx_9-2").value;
+                    break;//跳出迴圈，否則得到的結果會被後面蓋掉
+                }
+                else
+                {
+                    data_in[8][0]="no";
+                    data_in[8][1]=1;
+                    data_in[8][2]=0;
+                }
+            }
+
+/*
             ckBt =document.getElementById("ckbx_3").checked;
             if (ckBt==true){
                 data_in[2][0]="Y";
@@ -883,6 +1097,8 @@ input.check_me {
                 data_in[4][1]=1;
                 data_in[4][2]=0;
             }
+*/
+
 
 /*
             ckBt_5 =document.getElementById("ckbx_5").checked;
@@ -909,7 +1125,7 @@ input.check_me {
             }
 */
 
-
+/*
             ckBt =document.getElementById("ckbx_6").checked;
             if (ckBt==true){
                 data_in[5][0]="Y";
@@ -937,7 +1153,7 @@ input.check_me {
                 data_in[6][2]=0;
             }
 
-/*
+
             ckBt =document.getElementById("ckbx_8").checked;
             if (ckBt==true){
                 data_in[7][0]="Y";
@@ -1268,6 +1484,180 @@ input.check_me {
     
         </p><br/>
 
+<!--新時間第一天-->
+
+    </div>
+    <br/>
+
+    <div id="list_2" >
+        <br/>
+    <p>
+    <!--<label class="check-label-title" style="border-style:ridge" id="Date_D2_1_0">2023/09/01</label>-->
+    <label class="check-label-title" style="border-style:ridge" font color="#FF0000" id="Date_D2_1_0"></label> <!--2023/09/01-->
+
+    <input type="checkbox" class="check_me" value="2" id="ckbx_2" >
+        <!--<label class="form-check-label" for="ckbx_2" > 2023/09/01(週五) 去市區</label> <br/> --> <!--2023/01/01(週日) 去市區-->
+        <label class="form-check-label" for="ckbx_2"  id="Date_D2_1_w"></label> <br/> <!--22023/09/01(週五) 去市區-->
+
+    <label class="form-check-label" for="ckbx_2">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_2-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_2">位；</label>
+    <label class="form-check-label" for="ckbx_2">大型行李</label>
+    <select name="select_box_1" id="slbx_2-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_2">件</label>
+    <br/><br/>
+    <!--<input type="checkbox" class="check_me" value="3" id="ckbx_3" >-->
+    <!--<label class="form-check-label" for="ckbx_3" > 2023/09/01(週五) 回廠區</label> <br/>    --> <!--2023/01/01(週日) 回廠區-->
+    <!--<label class="form-check-label" for="ckbx_3"  id="Date_D2_3_w" ></label> <br/>    -->    <!--2023/09/01(週五) 回廠區-->
+<fieldset>
+    <legend><label class="form-check-label" for="ckbx_3"  id="Date_D2_3_w" ></label></legend>
+
+    <div><input type="radio" name="radio_3" class="check_me" value="Y_15:00" id="ckbx_3_a" >   <label class="form-check-label" for="ckbx_3_a" > 15:00</label></div> 
+    <br/>
+    <div><input type="radio" name="radio_3" class="check_me" value="Y_19:00" id="ckbx_3_b" >   <label class="form-check-label" for="ckbx_3_b" > 19:00</label></div>
+    <br/>
+
+    <label class="form-check-label" for="ckbx_3">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_3-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_3">位；</label>
+    <label class="form-check-label" for="ckbx_3">大型行李</label>
+    <select name="select_box_1" id="slbx_3-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_3">件</label>
+
+    </p><br/>
+    </div>
+</fieldset>
+
+
+<!--新時間第一天-->
+
+
+
+<!--新時間第二天-->
+    <br/>
+    
+    <p>
+    <!--<label class="check-label-title" style="border-style:ridge">2023/09/02</label>-->
+    <label class="check-label-title" style="border-style:ridge" id="Date_D3_1_0"></label>
+    <!--<label class="check-label-title" >本日無派車安排</label>-->
+
+    <input type="checkbox" class="check_me" value="4" id="ckbx_4" >
+    <label class="check_me_label" for="ckbx_4"></label>
+    <!--<label class="form-check-label" for="ckbx_4" >2023/09/02(週六) 去市區</label> <br/>-->
+    <label class="form-check-label" for="ckbx_4" id="Date_D3_1_w"></label> <br/>
+    <label class="form-check-label" for="ckbx_4">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_4-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_4">位；</label>
+    <label class="form-check-label" for="ckbx_4">大型行李</label>
+    <select name="select_box_1" id="slbx_4-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_4">件</label>
+    <br/><br/>
+    <!--<input type="checkbox" class="check_me" value="5" id="ckbx_5" >-->
+    <label class="check_me_label" for="ckbx_5"></label>
+    <!--<label class="form-check-label" for="ckbx_5" >2023/09/02(週六) 回廠區</label> <br/>-->
+    <label class="form-check-label" for="ckbx_5" id="Date_D3_3_w"></label> <br/>
+
+    <div><input type="radio" name="radio_5" class="check_me" value="Y_15:00" id="ckbx_5_a" >   <label class="form-check-label" for="ckbx_5_a" > 15:00</label></div> 
+    <br/>
+    <div><input type="radio" name="radio_5" class="check_me" value="Y_19:00" id="ckbx_5_b" >   <label class="form-check-label" for="ckbx_5_b" > 19:00</label></div>
+    <br/>
+
+
+
+    <label class="form-check-label" for="ckbx_5">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_5-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_5">位；</label>
+    <label class="form-check-label" for="ckbx_5">大型行李</label>
+    <select name="select_box_1" id="slbx_5-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_5">件</label>
+
+
+    </p><br/>
+<!--新時間第二天-->
+
+
+
+<!--新時間第三天-->
+    <p>
+    <!--<label class="check-label-title" style="border-style:ridge">2023/09/03</label>-->
+
+    <label class="check-label-title" style="border-style:ridge" id="Date_D4_1_0"></label>
+    <input type="checkbox" class="check_me" value="6" id="ckbx_6" >
+    <label class="check_me_label" for="ckbx_6"></label>
+
+    <!--<label class="form-check-label" for="ckbx_6" >2023/09/03(週日) 去市區</label> <br/>-->
+
+    <label class="form-check-label" for="ckbx_6" id="Date_D4_1_w"></label> <br/>
+    <label class="form-check-label" for="ckbx_6">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_6-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_6">位</label>
+    <label class="form-check-label" for="ckbx_6">大型行李</label>
+    <select name="select_box_1" id="slbx_6-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_6">件</label>
+    <br/><br/>
+    <!--<input type="checkbox" class="check_me" value="7" id="ckbx_7" >-->
+    <label class="check_me_label" for="ckbx_7"></label>
+
+    <!--<label class="form-check-label" for="ckbx_7" >2023/09/03(週日) 回廠區</label> <br/>-->
+
+    <label class="form-check-label" for="ckbx_7" id="Date_D4_3_w"></label> <br/>
+
+    <div><input type="radio" name="radio_7" class="check_me" value="Y_15:00" id="ckbx_7_a" >   <label class="form-check-label" for="ckbx_7_a" > 15:00</label></div> 
+    <br/>
+    <div><input type="radio" name="radio_7" class="check_me" value="Y_19:00" id="ckbx_7_b" >   <label class="form-check-label" for="ckbx_7_b" > 19:00</label></div>
+    <br/>
+
+
+    <label class="form-check-label" for="ckbx_7">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_7-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_7">位</label>
+    <label class="form-check-label" for="ckbx_7">大型行李</label>
+    <select name="select_box_1" id="slbx_7-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_7">件</label>
+    </p><br/>
+
+<!--新時間第三天-->
+
+
+<!--新時間第四天-->
+    <p>
+    <!--<label class="check-label-title" style="border-style:ridge">2023/09/03</label>-->
+
+    <label class="check-label-title" style="border-style:ridge" id="Date_D5_1_0"></label>
+    <input type="checkbox" class="check_me" value="8" id="ckbx_6" >
+    <label class="check_me_label" for="ckbx_8"></label>
+
+    <!--<label class="form-check-label" for="ckbx_6" >2023/09/03(週日) 去市區</label> <br/>-->
+
+    <label class="form-check-label" for="ckbx_8" id="Date_D5_1_w"></label> <br/>
+    <label class="form-check-label" for="ckbx_8">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_8-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_8">位</label>
+    <label class="form-check-label" for="ckbx_8">大型行李</label>
+    <select name="select_box_1" id="slbx_8-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_8">件</label>
+    <br/><br/>
+    <!--<input type="checkbox" class="check_me" value="7" id="ckbx_7" >-->
+    <label class="check_me_label" for="ckbx_9"></label>
+
+    <!--<label class="form-check-label" for="ckbx_7" >2023/09/03(週日) 回廠區</label> <br/>-->
+
+    <label class="form-check-label" for="ckbx_9" id="Date_D5_3_w"></label> <br/>
+
+    <div><input type="radio" name="radio_9" class="check_me" value="Y_15:00" id="ckbx_9_a" >   <label class="form-check-label" for="ckbx_7_a" > 15:00</label></div> 
+    <br/>
+    <div><input type="radio" name="radio_9" class="check_me" value="Y_19:00" id="ckbx_9_b" >   <label class="form-check-label" for="ckbx_7_b" > 19:00</label></div>
+    <br/>
+
+
+    <label class="form-check-label" for="ckbx_9">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_9-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_9">位</label>
+    <label class="form-check-label" for="ckbx_9">大型行李</label>
+    <select name="select_box_1" id="slbx_9-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_9">件</label>
+    </p><br/>
+<!--新時間第四天-->
 <!--
     <p>
     <label class="check-label-title" style="border-style:ridge">2022/04/11</label>
@@ -1321,72 +1711,7 @@ input.check_me {
     <label class="form-check-label" for="ckbx_5b" font color="#FF0000">自行回廠/其他安排不回廠</label> <br/> <br/>
 -->
 
-
-<p>
-    <!--<label class="check-label-title" style="border-style:ridge">2023/09/02</label>-->
-    <label class="check-label-title" style="border-style:ridge" id="Date_D3_1_0"></label>
-    <!--<label class="check-label-title" >本日無派車安排</label>-->
-
-    <input type="checkbox" class="check_me" value="4" id="ckbx_4" >
-    <label class="check_me_label" for="ckbx_4"></label>
-    <!--<label class="form-check-label" for="ckbx_4" >2023/09/02(週六) 去市區</label> <br/>-->
-    <label class="form-check-label" for="ckbx_4" id="Date_D3_1_w"></label> <br/>
-    <label class="form-check-label" for="ckbx_4">本人含家屬共登記</label>
-    <select name="select_box_1" id="slbx_4-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
-    <label class="form-check-label" for="ckbx_4">位；</label>
-    <label class="form-check-label" for="ckbx_4">大型行李</label>
-    <select name="select_box_1" id="slbx_4-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
-    <label class="form-check-label" for="ckbx_4">件</label>
-    <br/><br/>
-    <input type="checkbox" class="check_me" value="5" id="ckbx_5" >
-    <label class="check_me_label" for="ckbx_5"></label>
-    <!--<label class="form-check-label" for="ckbx_5" >2023/09/02(週六) 回廠區</label> <br/>-->
-    <label class="form-check-label" for="ckbx_5" id="Date_D3_3_w"></label> <br/>
-    <label class="form-check-label" for="ckbx_5">本人含家屬共登記</label>
-    <select name="select_box_1" id="slbx_5-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
-    <label class="form-check-label" for="ckbx_5">位；</label>
-    <label class="form-check-label" for="ckbx_5">大型行李</label>
-    <select name="select_box_1" id="slbx_5-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
-    <label class="form-check-label" for="ckbx_5">件</label>
-
-
-    </p><br/>
-
-
-
-    <!-- </p><br/> -->
-
-
-    <p>
-        <!--<label class="check-label-title" style="border-style:ridge">2023/09/03</label>-->
-
-        <label class="check-label-title" style="border-style:ridge" id="Date_D4_1_0"></label>
-        <input type="checkbox" class="check_me" value="6" id="ckbx_6" >
-        <label class="check_me_label" for="ckbx_6"></label>
-
-        <!--<label class="form-check-label" for="ckbx_6" >2023/09/03(週日) 去市區</label> <br/>-->
-
-        <label class="form-check-label" for="ckbx_6" id="Date_D4_1_w"></label> <br/>
-        <label class="form-check-label" for="ckbx_6">本人含家屬共登記</label>
-        <select name="select_box_1" id="slbx_6-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
-        <label class="form-check-label" for="ckbx_6">位</label>
-        <label class="form-check-label" for="ckbx_6">大型行李</label>
-        <select name="select_box_1" id="slbx_6-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
-        <label class="form-check-label" for="ckbx_6">件</label>
-        <br/><br/>
-        <input type="checkbox" class="check_me" value="7" id="ckbx_7" >
-        <label class="check_me_label" for="ckbx_7"></label>
-
-        <!--<label class="form-check-label" for="ckbx_7" >2023/09/03(週日) 回廠區</label> <br/>-->
-
-        <label class="form-check-label" for="ckbx_7" id="Date_D4_3_w"></label> <br/>
-        <label class="form-check-label" for="ckbx_7">本人含家屬共登記</label>
-        <select name="select_box_1" id="slbx_7-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
-        <label class="form-check-label" for="ckbx_7">位</label>
-        <label class="form-check-label" for="ckbx_7">大型行李</label>
-        <select name="select_box_1" id="slbx_7-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
-        <label class="form-check-label" for="ckbx_7">件</label>
-        </p><br/>
+<!--舊，沒用到-->
 
 
 
@@ -1414,6 +1739,9 @@ input.check_me {
     <label class="form-check-label" for="">件</label>
     </p><br/>
 -->
+
+
+
     <!--
     <p>
     <label class="check-label-title" style="border-style:ridge">2/14</label>
@@ -1544,10 +1872,12 @@ input.check_me {
     var Start_Date_Day2 = new Date(Start_Date_Day1);
     var Start_Date_Day3 = new Date(Start_Date_Day1);
     var Start_Date_Day4 = new Date(Start_Date_Day1);
+        var Start_Date_Day5 = new Date(Start_Date_Day1);
 
     Start_Date_Day2.setDate(Start_Date_Day2.getDate() + 2-1); 
     Start_Date_Day3.setDate(Start_Date_Day3.getDate() + 3-1); 
     Start_Date_Day4.setDate(Start_Date_Day4.getDate() + 4-1); 
+        Start_Date_Day5.setDate(Start_Date_Day5.getDate() + 5-1); 
 
     //alert(Start_Date_Day1);
     function Display_date(Start_Date){
@@ -1589,6 +1919,10 @@ input.check_me {
     document.getElementById('Date_D4_1_w').innerHTML = Display_date_temp[1] + ' 去市區' ;
     document.getElementById('Date_D4_3_w').innerHTML = Display_date_temp[1] + ' 回廠區' ;
 
+        Display_date_temp= Display_date(Start_Date_Day5);
+        document.getElementById('Date_D5_1_0').innerHTML = Display_date_temp[0]  ;
+        document.getElementById('Date_D5_1_w').innerHTML = Display_date_temp[1] + ' 去市區' ;
+        document.getElementById('Date_D5_3_w').innerHTML = Display_date_temp[1] + ' 回廠區' ;
 
     //console.log(Display_date_temp[0]);
     //console.log(Display_date_temp[1]);
