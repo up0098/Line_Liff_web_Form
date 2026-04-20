@@ -880,7 +880,7 @@ input.check_me {
 
 
 
-
+         //第二天早上去市區
             ckBt =document.getElementById("ckbx_4").checked;
             if (ckBt==true){
                 data_in[3][0]="Y";
@@ -893,7 +893,7 @@ input.check_me {
                 data_in[3][1]=1;
                 data_in[3][2]=0;
             }
-
+/*
             ckBt =document.getElementById("ckbx_5").checked;
             if (ckBt==true){
                 data_in[4][0]="Y";
@@ -906,6 +906,26 @@ input.check_me {
                 data_in[4][1]=1;
                 data_in[4][2]=0;
             }
+*/
+            //回程三個時段的判斷與填資料，第二天
+                ratings = document.getElementsByName('radio_5');
+            for (const rating of ratings) 
+            {
+                if (rating.checked) {
+                    data_in[4][0]=`${rating.value}`;
+                    data_in[4][1]=document.getElementById("slbx_5-1").value;
+                    data_in[4][2]=document.getElementById("slbx_5-2").value;
+                    break;//跳出迴圈，否則得到的結果會被後面蓋掉
+                }
+                else
+                {
+                    data_in[4][0]="no";
+                    data_in[4][1]=1;
+                    data_in[4][2]=0;
+                }
+            }
+
+
 
 /*
             ckBt_5 =document.getElementById("ckbx_5").checked;
@@ -932,7 +952,7 @@ input.check_me {
             }
 */
 
-
+         //第三天早上去市區
             ckBt =document.getElementById("ckbx_6").checked;
             if (ckBt==true){
                 data_in[5][0]="Y";
@@ -946,7 +966,7 @@ input.check_me {
                 data_in[5][2]=0;
             }
             
-            
+            /*
             ckBt =document.getElementById("ckbx_7").checked;
             if (ckBt==true){
                 data_in[6][0]="Y";
@@ -959,6 +979,26 @@ input.check_me {
                 data_in[6][1]=1;
                 data_in[6][2]=0;
             }
+            */
+
+            //回程三個時段的判斷與填資料，第三天
+                ratings = document.getElementsByName('radio_7');
+            for (const rating of ratings) 
+            {
+                if (rating.checked) {
+                    data_in[6][0]=`${rating.value}`;
+                    data_in[6][1]=document.getElementById("slbx_7-1").value;
+                    data_in[6][2]=document.getElementById("slbx_7-2").value;
+                    break;//跳出迴圈，否則得到的結果會被後面蓋掉
+                }
+                else
+                {
+                    data_in[6][0]="no";
+                    data_in[6][1]=1;
+                    data_in[6][2]=0;
+                }
+            }
+
 
 /*
             ckBt =document.getElementById("ckbx_8").checked;
@@ -1269,9 +1309,7 @@ input.check_me {
     <p>
         <!--<label class="check-label-title" style="border-style:ridge" id="Date_D2_1_0">2023/09/01</label>-->
         <label class="check-label-title" style="border-style:ridge" font color="#FF0000" id="Date_D2_1_0"></label> <!--2023/09/01-->
-    
 
-        //晚上去市區
         <input type="checkbox" class="check_me" value="2" id="ckbx_2" >
             <!--<label class="form-check-label" for="ckbx_2" > 2023/09/01(週五) 去市區</label> <br/> --> <!--2023/01/01(週日) 去市區-->
             <label class="form-check-label" for="ckbx_1"  id="Date_D2_1_w"></label> <br/> <!--22023/09/01(週五) 去市區-->
