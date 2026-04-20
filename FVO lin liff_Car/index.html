@@ -813,7 +813,7 @@ input.check_me {
             }
 */
 
-
+         //晚上去市區
             ckBt =document.getElementById("ckbx_1").checked;
             if (ckBt==true){
                 data_in[0][0]="Y";
@@ -828,10 +828,7 @@ input.check_me {
             }
 
 
-
-
-
-
+         //第一天早上去市區
             ckBt =document.getElementById("ckbx_2").checked;
             if (ckBt==true){
                 data_in[1][0]="Y";
@@ -845,6 +842,9 @@ input.check_me {
                 data_in[1][2]=0;
             }
             
+
+
+            /*
             ckBt =document.getElementById("ckbx_3").checked;
             if (ckBt==true){
                 data_in[2][0]="Y";
@@ -857,6 +857,29 @@ input.check_me {
                 data_in[2][1]=1;
                 data_in[2][2]=0;
             }
+            */
+
+
+            //回程三個時段的判斷與填資料，第一天
+                ratings = document.getElementsByName('radio_3');
+            for (const rating of ratings) 
+            {
+                if (rating.checked) {
+                    data_in[2][0]=`${rating.value}`;
+                    data_in[2][1]=document.getElementById("slbx_3-1").value;
+                    data_in[2][2]=document.getElementById("slbx_3-2").value;
+                    break;//跳出迴圈，否則得到的結果會被後面蓋掉
+                }
+                else
+                {
+                    data_in[2][0]="no";
+                    data_in[2][1]=1;
+                    data_in[2][2]=0;
+                }
+            }
+
+
+
 
             ckBt =document.getElementById("ckbx_4").checked;
             if (ckBt==true){
@@ -1255,18 +1278,44 @@ input.check_me {
         <select name="select_box_1" id="slbx_2-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
         <label class="form-check-label" for="ckbx_2">件</label>
         <br/><br/>
-        <input type="checkbox" class="check_me" value="3" id="ckbx_3" >
+
+
+        <!--<input type="checkbox" class="check_me" value="3" id="ckbx_3" >-->
         <!--<label class="form-check-label" for="ckbx_3" > 2023/09/01(週五) 回廠區</label> <br/>    --> <!--2023/01/01(週日) 回廠區-->
-        <label class="form-check-label" for="ckbx_3"  id="Date_D2_3_w" ></label> <br/>    <!--2023/09/01(週五) 回廠區-->
+        <!--<label class="form-check-label" for="ckbx_3"  id="Date_D2_3_w" ></label> <br/>-->    <!--2023/09/01(週五) 回廠區-->
     
+        <!--
         <label class="form-check-label" for="ckbx_3">本人含家屬共登記</label>
         <select name="select_box_1" id="slbx_3-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
         <label class="form-check-label" for="ckbx_3">位；</label>
         <label class="form-check-label" for="ckbx_3">大型行李</label>
         <select name="select_box_1" id="slbx_3-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
         <label class="form-check-label" for="ckbx_3">件</label>
-    
         </p><br/>
+
+        -->
+
+
+    <legend><label class="form-check-label" for="ckbx_3"  id="Date_D2_3_w" ></label></legend>
+
+    <div><input type="radio" name="radio_3" class="check_me" value="Y_15:00" id="ckbx_3_a" >   <label class="form-check-label" for="ckbx_3_a" > 15:00</label></div> 
+    <br/>
+    <div><input type="radio" name="radio_3" class="check_me" value="Y_17:00" id="ckbx_3_b" >   <label class="form-check-label" for="ckbx_3_b" > 17:00</label></div>
+    <br/>
+    <div><input type="radio" name="radio_3" class="check_me" value="Y_20:00" id="ckbx_3_c" >   <label class="form-check-label" for="ckbx_3_c" > 20:00</label></div>
+    <br/>
+
+    <label class="form-check-label" for="ckbx_3">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_3-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_3">位；</label>
+    <label class="form-check-label" for="ckbx_3">大型行李</label>
+    <select name="select_box_1" id="slbx_3-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_3">件</label>
+
+    </p><br/>
+
+
+
 
 <!--
     <p>
