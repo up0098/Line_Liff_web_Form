@@ -1211,6 +1211,7 @@ input.check_me {
      <!--<div id="checkbox_list" >-->
     <!---->
 
+    //連假前一天，晚上去市區
     <p >
     <!--
      <label class="check-label-title" style="border-style:ridge" font color="#FF0000" id="Date_D1_3_0">2023/08/31</label>
@@ -1263,10 +1264,14 @@ input.check_me {
 
     </p><br/>
 
+    //第一天
+    //第一天去程
     <p>
         <!--<label class="check-label-title" style="border-style:ridge" id="Date_D2_1_0">2023/09/01</label>-->
         <label class="check-label-title" style="border-style:ridge" font color="#FF0000" id="Date_D2_1_0"></label> <!--2023/09/01-->
     
+
+        //晚上去市區
         <input type="checkbox" class="check_me" value="2" id="ckbx_2" >
             <!--<label class="form-check-label" for="ckbx_2" > 2023/09/01(週五) 去市區</label> <br/> --> <!--2023/01/01(週日) 去市區-->
             <label class="form-check-label" for="ckbx_1"  id="Date_D2_1_w"></label> <br/> <!--22023/09/01(週五) 去市區-->
@@ -1295,7 +1300,7 @@ input.check_me {
 
         -->
 
-
+    //第一天回程
     <legend><label class="form-check-label" for="ckbx_3"  id="Date_D2_3_w" ></label></legend>
 
     <div><input type="radio" name="radio_3" class="check_me" value="Y_15:00" id="ckbx_3_a" >   <label class="form-check-label" for="ckbx_3_a" > 15:00</label></div> 
@@ -1370,7 +1375,8 @@ input.check_me {
     <label class="form-check-label" for="ckbx_5b" font color="#FF0000">自行回廠/其他安排不回廠</label> <br/> <br/>
 -->
 
-
+    //第二天
+    //第二天去程
 <p>
     <!--<label class="check-label-title" style="border-style:ridge">2023/09/02</label>-->
     <label class="check-label-title" style="border-style:ridge" id="Date_D3_1_0"></label>
@@ -1387,10 +1393,35 @@ input.check_me {
     <select name="select_box_1" id="slbx_4-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
     <label class="form-check-label" for="ckbx_4">件</label>
     <br/><br/>
+
+    //第二天回程
+    <!--
     <input type="checkbox" class="check_me" value="5" id="ckbx_5" >
+    <label class="check_me_label" for="ckbx_5"></label>
+    -->
+    <!--<label class="form-check-label" for="ckbx_5" >2023/09/02(週六) 回廠區</label> <br/>-->
+    <!--
+    <label class="form-check-label" for="ckbx_5" id="Date_D3_3_w"></label> <br/>
+    <label class="form-check-label" for="ckbx_5">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_5-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_5">位；</label>
+    <label class="form-check-label" for="ckbx_5">大型行李</label>
+    <select name="select_box_1" id="slbx_5-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_5">件</label>
+    -->
+
     <label class="check_me_label" for="ckbx_5"></label>
     <!--<label class="form-check-label" for="ckbx_5" >2023/09/02(週六) 回廠區</label> <br/>-->
     <label class="form-check-label" for="ckbx_5" id="Date_D3_3_w"></label> <br/>
+
+    <div><input type="radio" name="radio_5" class="check_me" value="Y_15:00" id="ckbx_5_a" >   <label class="form-check-label" for="ckbx_5_a" > 15:00</label></div> 
+    <br/>
+    <div><input type="radio" name="radio_5" class="check_me" value="Y_17:00" id="ckbx_5_b" >   <label class="form-check-label" for="ckbx_5_b" > 17:00</label></div>
+    <br/>
+    <div><input type="radio" name="radio_5" class="check_me" value="Y_20:00" id="ckbx_5_c" >   <label class="form-check-label" for="ckbx_5_c" > 20:00</label></div>
+    <br/>
+
+
     <label class="form-check-label" for="ckbx_5">本人含家屬共登記</label>
     <select name="select_box_1" id="slbx_5-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
     <label class="form-check-label" for="ckbx_5">位；</label>
@@ -1405,7 +1436,8 @@ input.check_me {
 
     <!-- </p><br/> -->
 
-
+    //第三天
+    //第三天去程
     <p>
         <!--<label class="check-label-title" style="border-style:ridge">2023/09/03</label>-->
 
@@ -1423,11 +1455,15 @@ input.check_me {
         <select name="select_box_1" id="slbx_6-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
         <label class="form-check-label" for="ckbx_6">件</label>
         <br/><br/>
+
+
+    //第三天回程
+    <!--
         <input type="checkbox" class="check_me" value="7" id="ckbx_7" >
         <label class="check_me_label" for="ckbx_7"></label>
-
+    -->
         <!--<label class="form-check-label" for="ckbx_7" >2023/09/03(週日) 回廠區</label> <br/>-->
-
+    <!--
         <label class="form-check-label" for="ckbx_7" id="Date_D4_3_w"></label> <br/>
         <label class="form-check-label" for="ckbx_7">本人含家屬共登記</label>
         <select name="select_box_1" id="slbx_7-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
@@ -1435,6 +1471,28 @@ input.check_me {
         <label class="form-check-label" for="ckbx_7">大型行李</label>
         <select name="select_box_1" id="slbx_7-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
         <label class="form-check-label" for="ckbx_7">件</label>
+    -->
+
+    <label class="check_me_label" for="ckbx_7"></label>
+
+    <!--<label class="form-check-label" for="ckbx_7" >2023/09/03(週日) 回廠區</label> <br/>-->
+
+    <label class="form-check-label" for="ckbx_7" id="Date_D4_3_w"></label> <br/>
+
+    <div><input type="radio" name="radio_7" class="check_me" value="Y_15:00" id="ckbx_7_a" >   <label class="form-check-label" for="ckbx_7_a" > 15:00</label></div> 
+    <br/>
+    <div><input type="radio" name="radio_7" class="check_me" value="Y_17:00" id="ckbx_7_b" >   <label class="form-check-label" for="ckbx_7_b" > 17:00</label></div>
+    <br/>
+    <div><input type="radio" name="radio_7" class="check_me" value="Y_20:00" id="ckbx_7_c" >   <label class="form-check-label" for="ckbx_7_c" > 20:00</label></div>
+    <br/>
+
+    <label class="form-check-label" for="ckbx_7">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_7-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_7">位</label>
+    <label class="form-check-label" for="ckbx_7">大型行李</label>
+    <select name="select_box_1" id="slbx_7-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+    <label class="form-check-label" for="ckbx_7">件</label>
+
         </p><br/>
 
 
