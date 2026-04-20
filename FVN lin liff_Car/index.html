@@ -468,6 +468,7 @@ input.check_me {
             }
 */
 
+//前一天晚上
             if((redata[0].c14 == "Y")){
                 //document.getElementById("ckbx_1").checked=true;
                 document.getElementById("ckbx_1").checked = true;
@@ -769,10 +770,13 @@ input.check_me {
                 startColumn: 1,
 //========================================================
 
+                //放假前一天晚上
                 datain_14: data_in[0][0],
                 datain_15: data_in[0][1],
                 datain_16: data_in[0][2],
+
                 
+                //第一天
                 datain_17: data_in[1][0],
                 datain_18: data_in[1][1],
                 datain_19: data_in[1][2],
@@ -780,7 +784,7 @@ input.check_me {
                 datain_21: data_in[2][1],
                 datain_22: data_in[2][2],
 
-
+                //第二天
                 datain_23: data_in[3][0],
                 datain_24: data_in[3][1],
                 datain_25: data_in[3][2],
@@ -788,7 +792,7 @@ input.check_me {
                 datain_27: data_in[4][1],
                 datain_28: data_in[4][2],
 
-
+                //第三天
                 datain_29: data_in[5][0],
                 datain_30: data_in[5][1],
                 datain_31: data_in[5][2],
@@ -796,7 +800,7 @@ input.check_me {
                 datain_33: data_in[6][1],
                 datain_34: data_in[6][2],
 
-
+                //第四天
                 datain_35: data_in[7][0],
                 datain_36: data_in[7][1],
                 datain_37: data_in[7][2],
@@ -1106,7 +1110,7 @@ input.check_me {
             }
 
 
-         //第四天早上去市區
+        //第四天早上去市區
             ckBt =document.getElementById("ckbx_8").checked;
             if (ckBt==true){
                 data_in[7][0]="Y";
@@ -1123,7 +1127,7 @@ input.check_me {
 
 
 
-                        //回程三個時段的判斷與填資料，第四天
+        //回程三個時段的判斷與填資料，第四天
                 ratings = document.getElementsByName('radio_9');
             for (const rating of ratings) 
             {
@@ -1397,6 +1401,8 @@ $(function(){
     <!---->
     <div id="list_1" >
     <br/>
+
+    //連假前一天，晚上去市區
     <p >
 
     <!--
@@ -1432,6 +1438,8 @@ $(function(){
     </div>
     <br/>
 
+    //第一天
+    //第一天去程
     <div id="list_2" >
         <br/>
     <p>
@@ -1449,6 +1457,8 @@ $(function(){
     <select name="select_box_1" id="slbx_2-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
     <label class="form-check-label" for="ckbx_2">件</label>
     <br/><br/>
+
+    //第一天回程
     <!--<input type="checkbox" class="check_me" value="3" id="ckbx_3" >-->
     <!--<label class="form-check-label" for="ckbx_3" > 2023/09/01(週五) 回廠區</label> <br/>    --> <!--2023/01/01(週日) 回廠區-->
     <!--<label class="form-check-label" for="ckbx_3"  id="Date_D2_3_w" ></label> <br/>    -->    <!--2023/09/01(週五) 回廠區-->
@@ -1476,11 +1486,14 @@ $(function(){
 
     <br/>
     
+
+    //第二天
+    //第二天去程
     <p>
     <!--<label class="check-label-title" style="border-style:ridge">2023/09/02</label>-->
-    <label class="check-label-title" style="border-style:ridge" id="Date_D3_1_0"></label>
     <!--<label class="check-label-title" >本日無派車安排</label>-->
 
+    <label class="check-label-title" style="border-style:ridge" id="Date_D3_1_0"></label>
     <input type="checkbox" class="check_me" value="4" id="ckbx_4" >
     <label class="check_me_label" for="ckbx_4"></label>
     <!--<label class="form-check-label" for="ckbx_4" >2023/09/02(週六) 去市區</label> <br/>-->
@@ -1492,9 +1505,12 @@ $(function(){
     <select name="select_box_1" id="slbx_4-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
     <label class="form-check-label" for="ckbx_4">件</label>
     <br/><br/>
+
+    //第二天回程
     <!--<input type="checkbox" class="check_me" value="5" id="ckbx_5" >-->
-    <label class="check_me_label" for="ckbx_5"></label>
     <!--<label class="form-check-label" for="ckbx_5" >2023/09/02(週六) 回廠區</label> <br/>-->
+
+    <label class="check_me_label" for="ckbx_5"></label>
     <label class="form-check-label" for="ckbx_5" id="Date_D3_3_w"></label> <br/>
 
     <div><input type="radio" name="radio_5" class="check_me" value="Y_15:00" id="ckbx_5_a" >   <label class="form-check-label" for="ckbx_5_a" > 15:00</label></div> 
@@ -1518,7 +1534,8 @@ $(function(){
 
 
 
-    
+    //第三天
+    //第三天去程
     <p>
     <!--<label class="check-label-title" style="border-style:ridge">2023/09/03</label>-->
 
@@ -1538,12 +1555,11 @@ $(function(){
     <br/><br/>
 
 
-
+    //第三天回程
     <!--<input type="checkbox" class="check_me" value="7" id="ckbx_7" >-->
-    <label class="check_me_label" for="ckbx_7"></label>
-
     <!--<label class="form-check-label" for="ckbx_7" >2023/09/03(週日) 回廠區</label> <br/>-->
-
+    
+    <label class="check_me_label" for="ckbx_7"></label>
     <label class="form-check-label" for="ckbx_7" id="Date_D4_3_w"></label> <br/>
 
     <div><input type="radio" name="radio_7" class="check_me" value="Y_15:00" id="ckbx_7_a" >   <label class="form-check-label" for="ckbx_7_a" > 15:00</label></div> 
@@ -1588,6 +1604,9 @@ $(function(){
     </p><br/>
     -->
 
+
+    //第四天
+    //第四天去程
     <p>
     <!--<label class="check-label-title" style="border-style:ridge">2023/09/03</label>-->
 
@@ -1605,11 +1624,12 @@ $(function(){
     <select name="select_box_1" id="slbx_8-2"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
     <label class="form-check-label" for="ckbx_8">件</label>
     <br/><br/>
-    <!--<input type="checkbox" class="check_me" value="7" id="ckbx_7" >-->
-    <label class="check_me_label" for="ckbx_9"></label>
 
+    //第四天回程
+    <!--<input type="checkbox" class="check_me" value="9" id="ckbx_9" >-->
     <!--<label class="form-check-label" for="ckbx_7" >2023/09/03(週日) 回廠區</label> <br/>-->
 
+    <label class="check_me_label" for="ckbx_9"></label>
     <label class="form-check-label" for="ckbx_9" id="Date_D5_3_w"></label> <br/>
 
     <div><input type="radio" name="radio_9" class="check_me" value="Y_15:00" id="ckbx_9_a" >   <label class="form-check-label" for="ckbx_9_a" > 15:00</label></div> 
@@ -1731,7 +1751,7 @@ $(function(){
         <!--//------------------------------------------------------------------------------  -->   
 
         <DIV>
-        <!--<div style="display:none">-->
+        <div style="display:none">
 
             <div id="Line_login" >
             <label>QueryString_12-63:</label>
