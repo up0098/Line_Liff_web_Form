@@ -50,13 +50,12 @@
           text-align:center; padding:0px;width:200px;
 
         }
-
         #text_list {
 
-        background:#ffffffce;
+            background:#ffffffb4;
+
 
         }
-
 
         body{
                     /*
@@ -71,11 +70,11 @@
             body::before {
                 content: "";
                 display: block;
-                background:#fff url("images_16.jpg")  fixed no-repeat;
+                background:#fff url("images_10.jpg")  fixed no-repeat;
                 background-size: contain ;
                 /*height: 300px;
                 width: 100%;*/
-                opacity: 0.3;
+                opacity: 0.5;
                 position: absolute;
                 /* 偏移值皆設為 0，讓僞元素跟父元素一樣大小 */
                 top: 0;
@@ -87,6 +86,7 @@
             body  .content {
             position: relative;
             }
+
 
 
 
@@ -167,7 +167,7 @@ input.check_me {
        </style>  
     
     <meta charset="utf-8" />
-    <title> 2025 國慶連假 用餐登記-FVO</title>
+    <title> 2026 勞動節連假 用餐登記</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- bootstrap 4.3.1 -->
@@ -185,6 +185,7 @@ input.check_me {
     <!--<script src="js/main.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.8.16/dayjs.min.js" crossorigin="anonymous"></script>
 
+
    <style>
        #MainDiv button {
            margin:3px;
@@ -193,7 +194,7 @@ input.check_me {
     <script>
 
         //你的liff app ID, 例如 --> 0000000000-spPeRmAn
-        var YourLiffAppId = '1657025059-27moeq6k';
+        var YourLiffAppId = '1655609516-Eold7g4B';
         var  yourUserID ;
         function initializeLiff(myLiffId) {
             liff
@@ -219,7 +220,7 @@ input.check_me {
         }
 
         function read_ss_value(userid){
-        var appUrl = 'https://script.google.com/macros/s/AKfycbwx2KQHEWDxfGpCyHrrpG0KoQU7iSGFSRfrcx64/exec',
+        var appUrl = 'https://script.google.com/macros/s/AKfycbzbLOU8D4Sp89W5Kqga7Ypj9hFZ4DUx_Cyfcp7Nyuhal4AF6Ho/exec',
             //sheetsUrl = 'https://docs.google.com/spreadsheets/d/1pZpwgUFCU8GAIUMitueoPtcbnv2Gz7sUS5a2-PypcpY/edit#gid=1224878036',
             //    sheetName = '春節用餐',
                 startRow = 1,
@@ -257,7 +258,7 @@ input.check_me {
         }
 
         function get_ss_value(userid){
-        var appUrl = 'https://script.google.com/macros/s/AKfycbwx2KQHEWDxfGpCyHrrpG0KoQU7iSGFSRfrcx64/exec',
+        var appUrl = 'https://script.google.com/macros/s/AKfycbzbLOU8D4Sp89W5Kqga7Ypj9hFZ4DUx_Cyfcp7Nyuhal4AF6Ho/exec',
             //sheetsUrl = 'https://docs.google.com/spreadsheets/d/1pZpwgUFCU8GAIUMitueoPtcbnv2Gz7sUS5a2-PypcpY/edit#gid=1224878036',
             //    sheetName = '春節用餐',
                 startRow = 1,
@@ -425,6 +426,7 @@ input.check_me {
             }
 
 
+
             if((redata[0].c28 == "Y")){
                 //document.getElementById("ckbx_1").checked=true;
                 document.getElementById("ckbx_8").checked = true;
@@ -443,7 +445,9 @@ input.check_me {
                 document.getElementById("slbx_10-1").value = redata[0].c33;
             }
 
-/* 
+
+
+
             if((redata[0].c34 == "Y")){
                 //document.getElementById("ckbx_1").checked=true;
                 document.getElementById("ckbx_11").checked = true;
@@ -461,7 +465,6 @@ input.check_me {
                 document.getElementById("ckbx_13").checked = true;
                 document.getElementById("slbx_13-1").value = redata[0].c39;
             }
- */
 
 /*
             if((redata[0].c40 == "Y")){
@@ -543,7 +546,7 @@ input.check_me {
 
 
         function Write_ss_value(userid){
-            var appUrl = 'https://script.google.com/macros/s/AKfycbwx2KQHEWDxfGpCyHrrpG0KoQU7iSGFSRfrcx64/exec',
+            var appUrl = 'https://script.google.com/macros/s/AKfycbzbLOU8D4Sp89W5Kqga7Ypj9hFZ4DUx_Cyfcp7Nyuhal4AF6Ho/exec',
                 //sheetsUrl = 'https://docs.google.com/spreadsheets/d/1pZpwgUFCU8GAIUMitueoPtcbnv2Gz7sUS5a2-PypcpY/edit#gid=1224878036',
                 //sheetName = '春節用餐',
                 startRow = 1,
@@ -582,7 +585,7 @@ input.check_me {
         }
 
         function Write_ss_value_1(userid){
-            var appUrl = 'https://script.google.com/macros/s/AKfycbwx2KQHEWDxfGpCyHrrpG0KoQU7iSGFSRfrcx64/exec',
+            var appUrl = 'https://script.google.com/macros/s/AKfycbzbLOU8D4Sp89W5Kqga7Ypj9hFZ4DUx_Cyfcp7Nyuhal4AF6Ho/exec',
                 //sheetsUrl = 'https://docs.google.com/spreadsheets/d/1pZpwgUFCU8GAIUMitueoPtcbnv2Gz7sUS5a2-PypcpY/edit#gid=1224878036',
                 //sheetName = '春節用餐',
                 startRow = 1,
@@ -613,7 +616,6 @@ input.check_me {
                 datain_15: data_in[0][1],
 
                 
-
                 datain_16: data_in[1][0],
                 datain_17: data_in[1][1],
                 
@@ -622,7 +624,6 @@ input.check_me {
 
                 datain_20: data_in[3][0],
                 datain_21: data_in[3][1],
-
 
 
                 datain_22: data_in[4][0],
@@ -635,7 +636,6 @@ input.check_me {
                 datain_27: data_in[6][1],
 
 
-
                 datain_28: data_in[7][0],
                 datain_29: data_in[7][1],
 
@@ -646,7 +646,7 @@ input.check_me {
                 datain_33: data_in[9][1],
 
 
-/* 
+
                 datain_34: data_in[10][0],
                 datain_35: data_in[10][1],
 
@@ -655,7 +655,7 @@ input.check_me {
 
                 datain_38: data_in[12][0],
                 datain_39: data_in[12][1],
-                 */
+
 
 /*
                 datain_40: data_in[13][0],
@@ -738,7 +738,7 @@ input.check_me {
                         liff.sendMessages([
                             {
                                 type: 'text',
-                                text: '2025 國慶連假 用餐登記查詢'
+                                text: '2026 勞動節連假 用餐登記查詢'
                             }
                         ])
 
@@ -783,7 +783,7 @@ input.check_me {
             
                 //建立2維陣列，[][]方式無效，要用迴圈跑
                 var data_in = [];
-                for (i = 0 ; i < 15 ; i++) {
+                for (i = 0 ; i < 15 +3+3; i++) {
                     data_in[i] = [];
                     }
 
@@ -791,7 +791,7 @@ input.check_me {
                 var ckbx_no;
                 ckbx_no=1;
 
-                for (i=0 ; i<=13-1-3-3+3;i++){
+                for (i=0 ; i<=13-1-3-3+3+3;i++){
 
                     ckBt =document.getElementById("ckbx_" + ckbx_no).checked;
                 if (ckBt==true){
@@ -1195,150 +1195,184 @@ input.check_me {
 
         <!--//------------------------------------------------------------------------------  --> 
     <div id="checkbox_list" style="display:none">
-    <!-- <div id="checkbox_list"> -->
+    <!-- <div id="checkbox_list" > -->
     <div id="text_list">
     <!---->
 
     <p >
-        <!--<label class="check-label-title" style="border-style:ridge" font color="#FF0000" >2023/04/28</label>-->
-        <label class="check-label-title" style="border-style:ridge" font color="#FF0000" id="Date_D1_3_0"></label>
-    
-        <div >
-        <input type="checkbox" class="check_me" value="1" id="ckbx_1" >
-        <label class="check_me_label" for="ckbx_1"></label>
-        <!--<label class="form-check-label" for="ckbx_1" >2023/04/28(週五) 晚上用餐登記</label> <br/>-->
-        <label class="form-check-label" for="ckbx_1" id="Date_D1_3_w"></label> <br/>
-        <label class="form-check-label" for="ckbx_1">本人含家屬共登記</label>
-        <select name="select_box_1" id="slbx_1-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
-        <label class="form-check-label" for="ckbx_1">位；</label>
-        </div>
-    
-        </p><br/>
-        
-        <p>
-        <!-- <label class="check-label-title" style="border-style:ridge">2023/04/29</label> -->
-        <label class="check-label-title" style="border-style:ridge" id="Date_D2_1_0"></label>
-        <input type="checkbox" class="check_me" value="2" id="ckbx_2" >
-        <label class="check_me_label" for="ckbx_2"></label>
-        <!-- <label class="form-check-label" for="ckbx_2" >2023/04/29(週六) 早上用餐登記</label> <br/> -->
-        <label class="form-check-label" for="ckbx_2"  id="Date_D2_1_w"></label> <br/>
-        <label class="form-check-label" for="ckbx_2">本人含家屬共登記</label>
-        <select name="select_box_1" id="slbx_2-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
-        <label class="form-check-label" for="ckbx_2">位；</label>
-        <br/><br/>
-        <!-- 
-            <label class="form-check-label_1" font size="18" font color="#FF0000">※若有參加2/10公司聚餐，請勿登記2/10中午宿舍用餐，請記得登記車輛，謝謝※</label> <br/>
-        -->
-        <input type="checkbox" class="check_me" value="3" id="ckbx_3" >
-        <label class="check_me_label" for="ckbx_3"></label>
-        <!-- <label class="form-check-label" for="ckbx_3" >2023/04/29(週六) 中午用餐登記</label> <br/> -->
-        <label class="form-check-label" for="ckbx_3"  id="Date_D2_2_w"></label> <br/>
-        <label class="form-check-label" for="ckbx_3">本人含家屬共登記</label>
-        <select name="select_box_1" id="slbx_3-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
-        <label class="form-check-label" for="ckbx_3">位；</label>
-        <br/><br/>
-        <input type="checkbox" class="check_me" value="4" id="ckbx_4" >
-        <label class="check_me_label" for="ckbx_4"></label>
-        <!-- <label class="form-check-label" for="ckbx_4" >2023/04/29(週六) 晚上用餐登記</label> <br/> -->
-        <label class="form-check-label" for="ckbx_4"  id="Date_D2_3_w"></label> <br/>
-        <label class="form-check-label" for="ckbx_4">本人含家屬共登記</label>
-        <select name="select_box_1" id="slbx_4-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
-        <label class="form-check-label" for="ckbx_4">位；</label>
-        </p><br/>
-    
-        <p>
-        <!-- <label class="check-label-title" style="border-style:ridge">2023/04/30</label> -->
-        <label class="check-label-title" style="border-style:ridge" id="Date_D3_1_0"></label>
-        <input type="checkbox" class="check_me" value="5" id="ckbx_5" >
-        <label class="check_me_label" for="ckbx_5"></label>
-        <!-- <label class="form-check-label" for="ckbx_5" >2023/04/30(週日) 早上用餐登記</label> <br/> -->
-        <label class="form-check-label" for="ckbx_5"  id="Date_D3_1_w"></label> <br/>
-        <label class="form-check-label" for="ckbx_5">本人含家屬共登記</label>
-        <select name="select_box_1" id="slbx_5-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
-        <label class="form-check-label" for="ckbx_5">位；</label>
-        <br/><br/>
-        <input type="checkbox" class="check_me" value="6" id="ckbx_6" >
-        <label class="check_me_label" for="ckbx_6"></label>
-        <!-- <label class="form-check-label" for="ckbx_6" >2023/04/30(週日) 中午用餐登記</label> <br/> -->
-        <label class="form-check-label" for="ckbx_6" id="Date_D3_2_w"></label> <br/>
-        <label class="form-check-label" for="ckbx_6">本人含家屬共登記</label>
-        <select name="select_box_1" id="slbx_6-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
-        <label class="form-check-label" for="ckbx_6">位；</label>
-        <br/><br/>
-        <input type="checkbox" class="check_me" value="7" id="ckbx_7" >
-        <label class="check_me_label" for="ckbx_7"></label>
-        <!-- <label class="form-check-label" for="ckbx_7" >2023/04/30(週日) 晚上用餐登記</label> <br/> -->
-        <label class="form-check-label" for="ckbx_7" id="Date_D3_3_w"></label> <br/>
-        <label class="form-check-label" for="ckbx_7">本人含家屬共登記</label>
-        <select name="select_box_1" id="slbx_7-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
-        <label class="form-check-label" for="ckbx_7">位；</label>
-        </p><br/>
-    
-    
-    
-        <p>
-        <!-- <label class="check-label-title" style="border-style:ridge">2023/05/01</label> -->
+    <!--<label class="check-label-title" style="border-style:ridge" font color="#FF0000" >2023/04/28</label>-->
+    <label class="check-label-title" style="border-style:ridge" font color="#FF0000" id="Date_D1_3_0"></label>
 
-        <label class="check-label-title" style="border-style:ridge" id="Date_D4_1_0"></label>
-        <input type="checkbox" class="check_me" value="8" id="ckbx_8" >
-        <label class="check_me_label" for="ckbx_8"></label>
+    <div >
+    <input type="checkbox" class="check_me" value="1" id="ckbx_1" >
+    <label class="check_me_label" for="ckbx_1"></label>
+    <!--<label class="form-check-label" for="ckbx_1" >2023/04/28(週五) 晚上用餐登記</label> <br/>-->
+    <label class="form-check-label" for="ckbx_1" id="Date_D1_3_w"></label> <br/>
+    <label class="form-check-label" for="ckbx_1">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_1-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_1">位；</label>
+    </div>
 
-        <!-- <label class="form-check-label" for="ckbx_8" >2023/05/01(週一) 早上用餐登記</label> <br/> -->
-
-        <label class="form-check-label" for="ckbx_8" id="Date_D4_1_w"></label> <br/>
-        <label class="form-check-label" for="ckbx_8">本人含家屬共登記</label>
-        <select name="select_box_1" id="slbx_8-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
-        <label class="form-check-label" for="ckbx_8">位；</label>
-        <br/><br/>
-        <input type="checkbox" class="check_me" value="9" id="ckbx_9" >
-        <label class="check_me_label" for="ckbx_9"></label>
-
-        <!-- <label class="form-check-label" for="ckbx_9" >2023/05/01(週一) 中午用餐登記</label> <br/> -->
-
-        <label class="form-check-label" for="ckbx_9" id="Date_D4_2_w"></label> <br/>
-        <label class="form-check-label" for="ckbx_9">本人含家屬共登記</label>
-        <select name="select_box_1" id="slbx_9-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
-        <label class="form-check-label" for="ckbx_9">位；</label>
-        <br/><br/>
-        <input type="checkbox" class="check_me" value="10" id="ckbx_10" >
-        <label class="check_me_label" for="ckbx_10"></label>
-
-        <!-- <label class="form-check-label" for="ckbx_10" >2023/05/01(週一) 晚上用餐登記</label> <br/> -->
-
-        <label class="form-check-label" for="ckbx_10" id="Date_D4_3_w"></label> <br/>
-        <label class="form-check-label" for="ckbx_10">本人含家屬共登記</label>
-        <select name="select_box_1" id="slbx_10-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
-        <label class="form-check-label" for="ckbx_10">位；</label>
-        </p><br/>
-
+    </p><br/>
     
-    
+    <p>
+    <!-- <label class="check-label-title" style="border-style:ridge">2023/04/29</label> -->
+    <label class="check-label-title" style="border-style:ridge" id="Date_D2_1_0"></label>
+    <input type="checkbox" class="check_me" value="2" id="ckbx_2" >
+    <label class="check_me_label" for="ckbx_2"></label>
+    <!-- <label class="form-check-label" for="ckbx_2" >2023/04/29(週六) 早上用餐登記</label> <br/> -->
+    <label class="form-check-label" for="ckbx_2"  id="Date_D2_1_w"></label> <br/>
+    <label class="form-check-label" for="ckbx_2">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_2-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_2">位；</label>
+    <br/><br/>
     <!-- 
-        <p>
-        <label class="check-label-title" style="border-style:ridge">2023/05/02</label>
-        <input type="checkbox" class="check_me" value="11" id="ckbx_11" >
-        <label class="check_me_label" for="ckbx_11"></label>
-        <label class="form-check-label" for="ckbx_11" >2023/05/02(週二) 早上用餐登記</label> <br/>
-        <label class="form-check-label" for="ckbx_11">本人含家屬共登記</label>
-        <select name="select_box_1" id="slbx_11-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
-        <label class="form-check-label" for="ckbx_11">位；</label>
-        <br/><br/>
-        <input type="checkbox" class="check_me" value="12" id="ckbx_12" >
-        <label class="check_me_label" for="ckbx_12"></label>
-        <label class="form-check-label" for="ckbx_12" >2023/05/02(週二) 中午用餐登記</label> <br/>
-        <label class="form-check-label" for="ckbx_12">本人含家屬共登記</label>
-        <select name="select_box_1" id="slbx_12-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
-        <label class="form-check-label" for="ckbx_12">位；</label>
-        <br/><br/>
-        <input type="checkbox" class="check_me" value="13" id="ckbx_13" >
-        <label class="check_me_label" for="ckbx_13"></label>
-        <label class="form-check-label" for="ckbx_13" >2023/05/02(週二) 晚上用餐登記</label> <br/>
-        <label class="form-check-label" for="ckbx_13">本人含家屬共登記</label>
-        <select name="select_box_1" id="slbx_13-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
-        <label class="form-check-label" for="ckbx_13">位；</label>
-        </p><br/>
-     -->
+        <label class="form-check-label_1" font size="18" font color="#FF0000">※若有參加2/10公司聚餐，請勿登記2/10中午宿舍用餐，請記得登記車輛，謝謝※</label> <br/>
+    -->
+    <input type="checkbox" class="check_me" value="3" id="ckbx_3" >
+    <label class="check_me_label" for="ckbx_3"></label>
+    <!-- <label class="form-check-label" for="ckbx_3" >2023/04/29(週六) 中午用餐登記</label> <br/> -->
+    <label class="form-check-label" for="ckbx_3"  id="Date_D2_2_w"></label> <br/>
+    <label class="form-check-label" for="ckbx_3">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_3-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_3">位；</label>
+    <br/><br/>
+    <input type="checkbox" class="check_me" value="4" id="ckbx_4" >
+    <label class="check_me_label" for="ckbx_4"></label>
+    <!-- <label class="form-check-label" for="ckbx_4" >2023/04/29(週六) 晚上用餐登記</label> <br/> -->
+    <label class="form-check-label" for="ckbx_4"  id="Date_D2_3_w"></label> <br/>
+    <label class="form-check-label" for="ckbx_4">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_4-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_4">位；</label>
+    </p><br/>
 
+    <p>
+    <!-- <label class="check-label-title" style="border-style:ridge">2023/04/30</label> -->
+    <label class="check-label-title" style="border-style:ridge" id="Date_D3_1_0"></label>
+    <input type="checkbox" class="check_me" value="5" id="ckbx_5" >
+    <label class="check_me_label" for="ckbx_5"></label>
+    <!-- <label class="form-check-label" for="ckbx_5" >2023/04/30(週日) 早上用餐登記</label> <br/> -->
+    <label class="form-check-label" for="ckbx_5"  id="Date_D3_1_w"></label> <br/>
+    <label class="form-check-label" for="ckbx_5">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_5-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_5">位；</label>
+    <br/><br/>
+    <input type="checkbox" class="check_me" value="6" id="ckbx_6" >
+    <label class="check_me_label" for="ckbx_6"></label>
+    <!-- <label class="form-check-label" for="ckbx_6" >2023/04/30(週日) 中午用餐登記</label> <br/> -->
+    <label class="form-check-label" for="ckbx_6" id="Date_D3_2_w"></label> <br/>
+    <label class="form-check-label" for="ckbx_6">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_6-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_6">位；</label>
+    <br/><br/>
+    <input type="checkbox" class="check_me" value="7" id="ckbx_7" >
+    <label class="check_me_label" for="ckbx_7"></label>
+    <!-- <label class="form-check-label" for="ckbx_7" >2023/04/30(週日) 晚上用餐登記</label> <br/> -->
+    <label class="form-check-label" for="ckbx_7" id="Date_D3_3_w"></label> <br/>
+    <label class="form-check-label" for="ckbx_7">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_7-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_7">位；</label>
+    </p><br/>
+
+
+
+    <p>
+    <!-- <label class="check-label-title" style="border-style:ridge">2023/05/01</label> -->
+
+    <label class="check-label-title" style="border-style:ridge" id="Date_D4_1_0"></label>
+    <input type="checkbox" class="check_me" value="8" id="ckbx_8" >
+    <label class="check_me_label" for="ckbx_8"></label>
+
+    <!-- <label class="form-check-label" for="ckbx_8" >2023/05/01(週一) 早上用餐登記</label> <br/> -->
+
+    <label class="form-check-label" for="ckbx_8" id="Date_D4_1_w"></label> <br/>
+    <label class="form-check-label" for="ckbx_8">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_8-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_8">位；</label>
+    <br/><br/>
+    <input type="checkbox" class="check_me" value="9" id="ckbx_9" >
+    <label class="check_me_label" for="ckbx_9"></label>
+
+    <!-- <label class="form-check-label" for="ckbx_9" >2023/05/01(週一) 中午用餐登記</label> <br/> -->
+
+    <label class="form-check-label" for="ckbx_9" id="Date_D4_2_w"></label> <br/>
+    <label class="form-check-label" for="ckbx_9">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_9-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_9">位；</label>
+    <br/><br/>
+    <input type="checkbox" class="check_me" value="10" id="ckbx_10" >
+    <label class="check_me_label" for="ckbx_10"></label>
+
+    <!-- <label class="form-check-label" for="ckbx_10" >2023/05/01(週一) 晚上用餐登記</label> <br/> -->
+
+    <label class="form-check-label" for="ckbx_10" id="Date_D4_3_w"></label> <br/>
+    <label class="form-check-label" for="ckbx_10">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_10-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_10">位；</label>
+    </p><br/>
+
+
+
+    <p>
+    <!-- <label class="check-label-title" style="border-style:ridge">2023/05/01</label> -->
+
+    <label class="check-label-title" style="border-style:ridge" id="Date_D5_1_0"></label>
+    <input type="checkbox" class="check_me" value="11" id="ckbx_11" >
+    <label class="check_me_label" for="ckbx_11"></label>
+
+    <!-- <label class="form-check-label" for="ckbx_8" >2023/05/01(週一) 早上用餐登記</label> <br/> -->
+
+    <label class="form-check-label" for="ckbx_11" id="Date_D5_1_w"></label> <br/>
+    <label class="form-check-label" for="ckbx_11">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_11-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_11">位；</label>
+    <br/><br/>
+    <input type="checkbox" class="check_me" value="12" id="ckbx_12" >
+    <label class="check_me_label" for="ckbx_12"></label>
+
+    <!-- <label class="form-check-label" for="ckbx_9" >2023/05/01(週一) 中午用餐登記</label> <br/> -->
+
+    <label class="form-check-label" for="ckbx_12" id="Date_D5_2_w"></label> <br/>
+    <label class="form-check-label" for="ckbx_12">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_12-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_12">位；</label>
+    <br/><br/>
+    <input type="checkbox" class="check_me" value="13" id="ckbx_13" >
+    <label class="check_me_label" for="ckbx_13"></label>
+
+    <!-- <label class="form-check-label" for="ckbx_10" >2023/05/01(週一) 晚上用餐登記</label> <br/> -->
+
+    <label class="form-check-label" for="ckbx_13" id="Date_D5_3_w"></label> <br/>
+    <label class="form-check-label" for="ckbx_13">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_13-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_13">位；</label>
+    </p><br/>
+
+<!-- 
+    <p>
+    <label class="check-label-title" style="border-style:ridge">2023/05/02</label>
+    <input type="checkbox" class="check_me" value="11" id="ckbx_11" >
+    <label class="check_me_label" for="ckbx_11"></label>
+    <label class="form-check-label" for="ckbx_11" >2023/05/02(週二) 早上用餐登記</label> <br/>
+    <label class="form-check-label" for="ckbx_11">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_11-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_11">位；</label>
+    <br/><br/>
+    <input type="checkbox" class="check_me" value="12" id="ckbx_12" >
+    <label class="check_me_label" for="ckbx_12"></label>
+    <label class="form-check-label" for="ckbx_12" >2023/05/02(週二) 中午用餐登記</label> <br/>
+    <label class="form-check-label" for="ckbx_12">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_12-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_12">位；</label>
+    <br/><br/>
+    <input type="checkbox" class="check_me" value="13" id="ckbx_13" >
+    <label class="check_me_label" for="ckbx_13"></label>
+    <label class="form-check-label" for="ckbx_13" >2023/05/02(週二) 晚上用餐登記</label> <br/>
+    <label class="form-check-label" for="ckbx_13">本人含家屬共登記</label>
+    <select name="select_box_1" id="slbx_13-1"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+    <label class="form-check-label" for="ckbx_13">位；</label>
+    </p><br/>
+ -->
 <!--
     <p>
     <label class="check-label-title" style="border-style:ridge">2/14</label>
@@ -1474,15 +1508,16 @@ input.check_me {
 
 <script>
     //var date = Date.now();
-    var Start_Date_Day1 = '2025/08/30'//'2023/12/30'  //'2023/08/31'
+    var Start_Date_Day1 = '2026/04/29'  //2025/08/30'  //'2023/08/31'
     var Start_Date_Day2 = new Date(Start_Date_Day1);
     var Start_Date_Day3 = new Date(Start_Date_Day1);
     var Start_Date_Day4 = new Date(Start_Date_Day1);
+    var Start_Date_Day5 = new Date(Start_Date_Day1);
 
     Start_Date_Day2.setDate(Start_Date_Day2.getDate() + 2-1); 
     Start_Date_Day3.setDate(Start_Date_Day3.getDate() + 3-1); 
     Start_Date_Day4.setDate(Start_Date_Day4.getDate() + 4-1); 
-
+    Start_Date_Day5.setDate(Start_Date_Day5.getDate() + 5-1); 
 
     function Display_date(Start_Date){
         var return_Date=[];
@@ -1526,6 +1561,13 @@ input.check_me {
     document.getElementById('Date_D4_1_w').innerHTML = Display_date_temp[1] + ' 早上用餐登記' ;
     document.getElementById('Date_D4_2_w').innerHTML = Display_date_temp[1] + ' 中午用餐登記' ;
     document.getElementById('Date_D4_3_w').innerHTML = Display_date_temp[1] + ' 晚上用餐登記' ;
+
+    Display_date_temp= Display_date(Start_Date_Day5);
+    document.getElementById('Date_D5_1_0').innerHTML = Display_date_temp[0]  ;
+    document.getElementById('Date_D5_1_w').innerHTML = Display_date_temp[1] + ' 早上用餐登記' ;
+    document.getElementById('Date_D5_2_w').innerHTML = Display_date_temp[1] + ' 中午用餐登記' ;
+    document.getElementById('Date_D5_3_w').innerHTML = Display_date_temp[1] + ' 晚上用餐登記' ;
+
 
     //console.log(Display_date_temp[0]);
     //console.log(Display_date_temp[1]);
